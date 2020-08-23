@@ -15,6 +15,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -22,6 +25,7 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1gHW530PJgsCeFUw7bS6eSoYhUo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -29,6 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../newProjects/translate" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -70,7 +75,7 @@
       <updated>1597771811336</updated>
       <workItem from="1597771812875" duration="34799000" />
       <workItem from="1597853217212" duration="128317000" />
-      <workItem from="1598154061339" duration="19338000" />
+      <workItem from="1598154061339" duration="19936000" />
     </task>
     <servers />
   </component>
