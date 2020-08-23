@@ -1,12 +1,6 @@
 .game-container {
     max-width: 1200px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
-
-/*.game-container {*/
-/*    max-width: 1200px;*/
-/*     display: grid;*/
-/*     grid-template-columns: repeat(auto-fill, minmax(200px, 250px))*/
-/* }*/
