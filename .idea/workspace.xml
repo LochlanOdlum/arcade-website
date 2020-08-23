@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac45995a-7752-4883-b4e2-83d5a747ce9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/GameButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/GameButton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/GameSelection.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/GameSelection.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +77,7 @@
       <updated>1597771811336</updated>
       <workItem from="1597771812875" duration="34799000" />
       <workItem from="1597853217212" duration="128317000" />
-      <workItem from="1598154061339" duration="22125000" />
+      <workItem from="1598154061339" duration="22424000" />
     </task>
     <servers />
   </component>
