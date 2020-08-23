@@ -1,0 +1,104 @@
+.ttt-screen {
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.71);
+  display: flex;
+  justify-content: center;
+}
+
+.ttt-pop-up {
+  margin-top: 12vh;
+  border-radius: 10px;
+  width: 40%;
+  max-width: 500px;
+  height: 35vh;
+  min-height: 300px;
+  background: white;
+}
+
+.ttt-pop-up-container {
+  position: relative;
+  height: 35vh;
+  margin: 10px 10px 10px 10px;
+  /*display: flex;*/
+}
+
+.ttt-pop-up-center-block {
+  bottom: 0;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+}
+
+.ttt-pop-up-title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.ttt-nickname {
+  font-size: 16px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border-color: #A2A2A2;
+  height:32px;
+  width: 100%
+}
+
+.ttt-play {
+  height: 35px;
+  line-height:35px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  border-radius: 4px;
+  background: #54c800;
+}
+
+.ttt-offline-container {
+  margin-top: 5px;
+  bottom: 0;
+}
+
+#ttt-play-offline {
+  background: #d34c3d;
+  margin-top: 0;
+  bottom: 0;
+}
+
+#ttt-play-offline:hover {
+  background: #c53829;
+}
+
+.ttt-play:hover {
+  background: #347F01;
+}
+
+@media (max-width: 600px) {
+  .ttt-pop-up {
+    width:70%;
+    height: 50%;
+  }
+  .ttt-pop-up-center-block {
+    margin-left: 5%;
+    margin-right: 5%;
+    /*background: black;*/
+    width: 90%;
+  }
+
+
+}
+
+@media (min-width: 600px) and (max-width:900px) {
+  .ttt-pop-up {
+    width:55%;
+    height: 40%;
+  }
+}

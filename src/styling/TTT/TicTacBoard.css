@@ -1,0 +1,94 @@
+
+
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    width: 55vh;
+    height: 55vh;
+    display: flex;
+}
+
+.board-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.board-square {
+    font-size: 80px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board-column:not(:first-child) {
+    border-left: 4px solid black;
+}
+.board-square:not(:first-child) {
+    border-top: 4px solid black;
+}
+
+.highlightCurrentPlayer {
+    background: yellow;
+    font-size: 20px;
+}
+
+.score-container {
+    margin-top: 20px;
+    display: flex;
+    /*background: green;*/
+    width: 55vh;
+    height: 75px;
+}
+
+.player1 {
+    flex-grow: 3
+}
+
+.ties {
+    flex-grow: 1
+}
+
+.player2 {
+    flex-grow: 3;
+}
+
+.score {
+    height: 75px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-id {
+    border-radius: 9px;
+    padding: 4px 4px 4px 4px;
+    flex-grow: 0;
+}
+
+
+.score-value {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .board {
+        width: 40vh;
+        height: 40vh;
+    }
+    .board-square {
+        font-size: 80px;
+    }
+
+    .score {
+        height: 50px;
+        font-size: 20px;
+    }
+}

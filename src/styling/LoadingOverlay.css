@@ -1,0 +1,10 @@
+.loading-overlay-centre {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 30vh;
+}
+
+.loading-overlay-text {
+    color: white;
+}

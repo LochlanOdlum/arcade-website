@@ -1,0 +1,36 @@
+.game-button {
+    margin: 0px 10px 10px 10px;
+    max-width: 250px;
+    /*min-width: 150px;*/
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+.icon {
+    width: 100%;
+    height: auto;
+    border-radius: 20%
+}
+
+.game-button-title {
+    margin: 0 0 0 0
+}
+
+
+@media (max-width: 600px) {
+    .game-button {
+        max-width: 180px;
+    }
+}

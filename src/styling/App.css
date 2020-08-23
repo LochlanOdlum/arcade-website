@@ -1,0 +1,22 @@
+body {
+    margin: 0 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.app {
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-header {
+    height: 20vh;
+}
+
+.main {
+    height: 80vh;
+    text-align: center;
+}
