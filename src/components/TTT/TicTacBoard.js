@@ -25,7 +25,23 @@ const TicTacBoard = ({game, onSquareClick}) => {
     }
 
     const playerOfSquare = game.players.find((p) => p.id === id);
-    return playerOfSquare.value;
+    // return playerOfSquare.value;
+    if (playerOfSquare.value === 'x') {
+      return (
+        <>
+          <div className="cross cross-up"></div>
+          <div className="cross cross-down"></div>
+        </>
+      )
+    }
+    if (playerOfSquare.value === 'o') {
+      return (
+        <>
+          <div className="circle circle-inner"></div>
+          <div className="circle circle-outer"></div>
+        </>
+      )
+    }
   };
 
   const highlightCurrentPlayer = ({id}) => {

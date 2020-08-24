@@ -1,5 +1,3 @@
-
-
 .board-container {
     display: flex;
     flex-direction: column;
@@ -7,6 +5,9 @@
 }
 
 .board {
+    padding: 5px 5px 5px 5px;
+    background: rgb(102, 72, 196);
+    border-radius: 10px;
     width: 55vh;
     height: 55vh;
     display: flex;
@@ -19,6 +20,10 @@
 }
 
 .board-square {
+    position: relative;
+    margin: 4px 4px 4px 4px;
+    border-radius: 10px;
+    background: rgb(51, 34, 103);
     font-size: 80px;
     flex: 1;
     display: flex;
@@ -27,14 +32,47 @@
 }
 
 .board-column:not(:first-child) {
-    border-left: 4px solid black;
+    border-left: 4px solid rgb(102, 72, 196);
 }
 .board-square:not(:first-child) {
-    border-top: 4px solid black;
+    border-top: 4px solid rgb(102, 72, 196);
 }
 
+.cross {
+    position: absolute;
+    height: 20%;
+    width: 80%;
+    background: rgb(235, 23, 80);
+}
+
+.cross-up {
+    transform: rotate(45deg)
+}
+.cross-down {
+    transform: rotate(-45deg)
+}
+
+.circle {
+    position: absolute;
+    background: rgb(255, 208, 51);
+    border-radius: 50%
+}
+.circle-outer {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%
+}
+.circle-inner {
+    z-index: 5;
+    background: rgb(51, 34, 103);
+    width: 30%;
+    height: 30%
+}
+
+
+
 .highlightCurrentPlayer {
-    background: yellow;
+    background: coral;
     font-size: 20px;
 }
 
@@ -59,6 +97,7 @@
 }
 
 .score {
+    color: white;
     height: 75px;
     font-size: 18px;
     display: flex;
@@ -85,6 +124,7 @@
     }
     .board-square {
         font-size: 80px;
+        margin: 2px 2px 2px 2px;
     }
 
     .score {

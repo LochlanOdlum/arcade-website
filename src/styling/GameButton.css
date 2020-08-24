@@ -17,6 +17,10 @@ a.nostyle:visited {
 }
 
 .game-button-title {
+    color: white;
     margin: 0 0 0 0
 }
 
+.game-button {
+    padding: 0 10px 0 10px;
+}

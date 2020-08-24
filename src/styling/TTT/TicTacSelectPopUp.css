@@ -1,14 +1,13 @@
-.ttt-screen {
-  position: fixed;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.71);
-  display: flex;
-  justify-content: center;
-}
+/*.ttt-screen {*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*  background: rgba(0, 0, 0, 0.71);*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*}*/
 
 .ttt-pop-up {
   margin-top: 12vh;
@@ -21,7 +20,8 @@
 }
 
 .ttt-pop-up-container {
-  position: relative;
+  z-index: 50;
+  position: relative;;
   height: 35vh;
   margin: 10px 10px 10px 10px;
   /*display: flex;*/
@@ -59,8 +59,9 @@
   font-weight: 700;
   margin-top: 10px;
   border-radius: 4px;
-  background: #54c800;
+  background: #FB6C38;
 }
+
 
 .ttt-offline-container {
   margin-top: 5px;
@@ -68,17 +69,17 @@
 }
 
 #ttt-play-offline {
-  background: #d34c3d;
+  background: rgb(204,44,161);
   margin-top: 0;
   bottom: 0;
 }
 
 #ttt-play-offline:hover {
-  background: #c53829;
+  background: #ac2387;
 }
 
 .ttt-play:hover {
-  background: #347F01;
+  background: #c14a1f;
 }
 
 @media (max-width: 600px) {

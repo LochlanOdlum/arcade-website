@@ -1,5 +1,12 @@
+html, body {
+    min-height: 100vh;
+    width: 100vw;
+}
+
 body {
     margin: 0 0;
+    background: rgb(51,12,78);
+    background: linear-gradient(321deg, rgba(51,12,78,1) 0%, rgba(35,16,73,1) 53%, rgba(54,33,136,1) 100%);
 }
 
 * {
