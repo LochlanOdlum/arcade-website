@@ -1,4 +1,4 @@
-.board-container {
+.ttt-board-block {
     margin-top: 10vh;
     display: flex;
     flex-direction: column;
@@ -6,12 +6,13 @@
 }
 
 .board {
+
     padding: 5px 5px 5px 5px;
     background: rgb(102, 72, 196);
     border-radius: 10px;
     width: 55vh;
     height: 55vh;
-    display: flex;
+    display: inline-flex;
 }
 
 .board-column {
