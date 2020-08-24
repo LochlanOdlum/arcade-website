@@ -14,20 +14,28 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.header-link:hover {
+    cursor: pointer;
+}
+
 .app {
     height: 100vh;
     width: 100vw;
 }
 .name {
+    /*font-weight: 700;*/
     display: inline-block;
-    padding-top: 15px;
+    padding-top: 13px;
     padding-left: 10px;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
 }
 
 .main-header {
-    background: coral;
+    background: #ADE292;
+    /*background: #1E73BE;*/
+    /*background: rgb(30, 30, 30);*/
+    /*background: coral;*/
     /*border-bottom: 1px solid grey;*/
     height: 6vh;
 }

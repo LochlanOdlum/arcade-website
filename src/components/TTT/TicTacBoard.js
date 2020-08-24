@@ -35,14 +35,6 @@ const TicTacBoard = ({game, onSquareClick}) => {
     if (!id) {
       return
     }
-    // Only set square with class winClass if the square is a winning square.
-    // let winClass = '';
-    // for (const [winX, winY] of game.winningSquares) {
-    //   if (x === winX && y === winY) {
-    //     winClass= ' square-won';
-    //   }
-    // }
-
     const playerOfSquare = game.players.find((p) => p.id === id);
 
     if (playerOfSquare.value === 'x') {

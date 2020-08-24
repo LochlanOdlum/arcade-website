@@ -1,12 +1,14 @@
 .game-block {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .game-grid-container {
-  margin: 10vh auto 0 auto;
-  max-width: 1200px;
+  margin: 3vh auto 0 auto;
+  max-width: 1000px;
   display: grid;
+  column-gap: 20px;
+  row-gap: 10px;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
