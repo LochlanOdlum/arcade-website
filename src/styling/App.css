@@ -18,9 +18,18 @@ body {
     height: 100vh;
     width: 100vw;
 }
+.name {
+    display: inline-block;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: white;
+}
 
 .main-header {
-    height: 20vh;
+    background: coral;
+    /*border-bottom: 1px solid grey;*/
+    height: 6vh;
 }
 
 .main {

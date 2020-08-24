@@ -44,6 +44,9 @@
     width: 80%;
     background: rgb(235, 23, 80);
 }
+.cross-square-won {
+    background: #fff;
+}
 
 .cross-up {
     transform: rotate(45deg)
@@ -57,9 +60,13 @@
     background: rgb(255, 208, 51);
     border-radius: 50%
 }
+.circle-square-won {
+    background: #fff;
+}
+
 .circle-outer {
-    width: 80%;
-    height: 80%;
+    width: 75%;
+    height: 75%;
     border-radius: 50%
 }
 .circle-inner {
@@ -68,7 +75,13 @@
     width: 30%;
     height: 30%
 }
+.circle-inner.circle-square-won {
+    background: rgb(39,208,117);
+}
 
+.square-won {
+    background: rgb(39,208,117);
+}
 
 
 .highlightCurrentPlayer {

@@ -11,34 +11,53 @@ const TicTacBoard = ({game, onSquareClick}) => {
     return game.board.map((column, x) => (
       <div key={`column-${x}`} className={`board-column ${x}`} >
         {column.map((id, y) => (
-          <div key={`square-${y}`} className={`board-square ${y}`} onClick={() => onSquareClick(x,y) }>
-            {squareValue(id)}
+          <div key={`square-${y}`} className={`board-square ${squareWinClass(x,y)} x:${x} y:${y}`} onClick={() => onSquareClick(x,y) }>
+            {squareValue(id, x, y)}
           </div>
         ))}
       </div>
     ));
   };
 
-  const squareValue = (id) => {
+  const squareWinClass = (x, y) => {
+    if (game.status === undefined) {
+      return ('');
+    }
+    for (const [winX, winY] of game.winningSquares) {
+      if (x === winX && y === winY) {
+        return ('square-won');
+      }
+    }
+    return ('');
+  };
+
+  const squareValue = (id, x, y) => {
     if (!id) {
       return
     }
+    // Only set square with class winClass if the square is a winning square.
+    // let winClass = '';
+    // for (const [winX, winY] of game.winningSquares) {
+    //   if (x === winX && y === winY) {
+    //     winClass= ' square-won';
+    //   }
+    // }
 
     const playerOfSquare = game.players.find((p) => p.id === id);
-    // return playerOfSquare.value;
+
     if (playerOfSquare.value === 'x') {
       return (
         <>
-          <div className="cross cross-up"></div>
-          <div className="cross cross-down"></div>
+          <div className={`cross cross-up cross-${squareWinClass(x,y)}`}></div>
+          <div className={`cross cross-down cross-${squareWinClass(x,y)}`}></div>
         </>
       )
     }
     if (playerOfSquare.value === 'o') {
       return (
         <>
-          <div className="circle circle-inner"></div>
-          <div className="circle circle-outer"></div>
+          <div className={`circle circle-inner circle-${squareWinClass(x,y)}`}></div>
+          <div className={`circle circle-outer circle-${squareWinClass(x,y)}`}></div>
         </>
       )
     }

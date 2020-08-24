@@ -7,6 +7,7 @@ export default class TicTacGame extends Game {
     [null, null, null]
   ];
   ties = 0;
+  winningSquares = [[null, null], [null, null], [null, null]];
 
   constructor(players) {
     if (players.length > 2) {
@@ -21,6 +22,9 @@ export default class TicTacGame extends Game {
   };
 
    checkForDraw = () => {
+     if (this.status === GameStatus.won) {
+       return;
+     }
     let nullCount = 0;
 
     for (const column of this.board) {
@@ -43,6 +47,7 @@ export default class TicTacGame extends Game {
       [0, -1],
       [-1, 1]
     ];
+    let currentWinningSquares = [[x, y], [null, null], [null, null]];
 
     const playerIDAtPoint = this.board[x][y];
 
@@ -52,6 +57,7 @@ export default class TicTacGame extends Game {
 
     for (const direction of searchDirections) {
       let matchCount = 1;
+
 
       for (const directionMagnitude of [1, -1]) {
         let currentX = x + direction[0] * directionMagnitude;
@@ -64,6 +70,7 @@ export default class TicTacGame extends Game {
           currentY < this.board[0].length &&
           this.board[currentX][currentY] === playerIDAtPoint
           ) {
+          currentWinningSquares[matchCount] = [currentX, currentY];
           matchCount += 1;
 
           currentX += direction[0] * directionMagnitude;
@@ -81,7 +88,10 @@ export default class TicTacGame extends Game {
 
         this.status = GameStatus.won;
         this.winner = this.players.find(p => p.id === playerIDAtPoint);
+        this.winningSquares = currentWinningSquares;
         return;
+      } else {
+        //Set current winning squares to blank...
       }
     }
   };
@@ -114,6 +124,8 @@ export default class TicTacGame extends Game {
   };
 
   playAgain = () => {
+    this.winningSquares = [[null, null], [null, null], [null, null]];
+    this.winner = null;
     this.status = GameStatus.inGame;
     this.board = [
       [null, null, null],

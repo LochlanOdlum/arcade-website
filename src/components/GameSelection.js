@@ -4,7 +4,7 @@ import "../styling/GameSelection.css";
 
 const GameSelection = () => {
   return (
-    //TODO: Center all games within flex box container
+    <div className="game-block">
       <div className="game-grid-container">
         <TicTacButton />
         <TicTacButton />
@@ -12,6 +12,7 @@ const GameSelection = () => {
         <TicTacButton />
         <TicTacButton />
       </div>
+    </div>
   );
 };
 

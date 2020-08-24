@@ -8,7 +8,7 @@ export const GameStatus = {
 export default class Game {
   // Shared properties among all game types
   players;
-  winner;
+  winner = null;
   status = GameStatus.preGame;
   currentPlayer;
 
