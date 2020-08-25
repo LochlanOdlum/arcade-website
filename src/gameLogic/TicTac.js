@@ -132,7 +132,18 @@ export default class TicTacGame extends Game {
       [null, null, null],
       [null, null, null]
     ];
-    console.log(this)
+    const otherPlayer = this.players.find((p) => p.id !== this.currentPlayer.id);
+    const swapValue = (player) => {
+      if (player.value === 'x') {
+        player.value = 'o';
+      } else {
+        player.value = 'x';
+      }
+    }
+
+    swapValue(this.currentPlayer);
+    swapValue(otherPlayer);
+    this.setCurrentPlayer(otherPlayer);
   };
 
 }

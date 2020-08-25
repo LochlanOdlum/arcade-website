@@ -12,7 +12,7 @@ const TicTacBoard = ({ game, onSquareClick }) => {
         {column.map((id, y) => (
           <div
             key={`square-${y}`}
-            className={`board-square ${squareWinClass(x, y)} x:${x} y:${y}`}
+            className={`board-square ${squareWinClass(x, y)} x-${x} y-${y}`}
             onClick={() => onSquareClick(x, y)}
           >
             {squareValue(id, x, y)}
@@ -51,12 +51,12 @@ const TicTacBoard = ({ game, onSquareClick }) => {
     if (playerOfSquare.value === "o") {
       return (
         <>
-          <div
-            className={`circle circle-inner circle-${squareWinClass(x, y)}`}
-          />
-          <div
-            className={`circle circle-outer circle-${squareWinClass(x, y)}`}
-          />
+            <div
+              className={`circle circle-inner circle-${squareWinClass(x, y)}`}
+            />
+            <div
+              className={`circle circle-outer circle-${squareWinClass(x, y)}`}
+            />
         </>
       );
     }
@@ -78,6 +78,7 @@ const TicTacBoard = ({ game, onSquareClick }) => {
           value={game.players[0].value}
           side="left"
         />
+        <div className="break" />
         <div className="board">{renderBoard()}</div>
         <PlayerBox
           game={game}

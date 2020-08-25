@@ -50,7 +50,7 @@
   font-weight: 700;
   margin-top: 10px;
   border-radius: 4px;
-  background: #FB6C38;
+  background: #84CC60;
 }
 
 
@@ -70,7 +70,7 @@
 }
 
 .ttt-play:hover {
-  background: #c14a1f;
+  background: #5E9940;
 }
 
 @media (max-width: 600px) {

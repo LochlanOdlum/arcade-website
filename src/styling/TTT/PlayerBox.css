@@ -12,19 +12,19 @@
 }
 
 .player-box-container.left {
-    margin: 0 150px 0 0;
+    margin: 12vh 150px 0 50px;
+    order: 1;
 }
 .player-box-container.right {
-    margin: 0 0 0 150px;
+    margin: 12vh 50px 0 150px;
+    order: 3;
 }
 
 .ttt-user-icon-circle{
     display: inline-block;
     margin-top: 4px;
-    border-radius: 50%;
     overflow: hidden;
     border: 2px solid white;
-    display: inline-block;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -84,10 +84,56 @@
     border-radius: 50%
 }
 .mini-circle-inner {
-    margin-top: 16.5px;
-    z-index: 5;
+    margin-top: 16px;
+    z-index: 1;
     background: rgb(51, 34, 103);
 
     width: 22px;
     height: 22px;
+}
+
+@media (max-width: 1300px) {
+    .ttt-player-box-name {
+        font-size: 16px;
+    }
+    .player-box-container.left {
+        margin: 12vh 30px 0 70px;
+    }
+    .player-box-container.right {
+        margin: 12vh 70px 0 30px;
+    }
+}
+@media(max-width: 860px) {
+    .player-box-container {
+        height: 170px;
+        width: 124px;
+    }
+    .mini-circle-outer {
+        width: 40px;
+        height: 40px;
+    }
+    .mini-circle-inner{
+        margin-top: 12px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 766px) {
+    .player-box-container.left {
+        margin: 20px 40px 0 0;
+    }
+    .player-box-container.right {
+        margin: 20px 0 0 40px;
+       order: 2;
+    }
+}
+@media (max-width: 340px) {
+    .player-box-container.left {
+        margin: 20px 20px 0 0;
+    }
+    .player-box-container.right {
+        margin: 20px 0 0 20px;
+        order: 2;
+    }
 }
