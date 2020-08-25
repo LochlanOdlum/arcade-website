@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import TicTacHeader from "./TicTacHeader";
 import TicTacBoard from "./TicTacBoard";
 import useTicTac, { displayGame } from "../../hooks/useTicTac";
-import Game, { GameStatus } from "../../gameLogic/game";
+import { GameStatus } from "../../gameLogic/game";
 
 const TicTacOfflinePage = () => {
   const game = useTicTac();
