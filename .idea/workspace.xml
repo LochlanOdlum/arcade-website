@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ac45995a-7752-4883-b4e2-83d5a747ce9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacOfflinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacOfflinePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacOnlinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacOnlinePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styling/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styling/GameButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/GameButton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styling/GameSelection.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/GameSelection.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styling/TTT/PlayerBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/PlayerBox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styling/TTT/TicTacHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/TicTacHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styling/TTT/TicTacPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/TicTacPage.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +87,7 @@
       <updated>1597771811336</updated>
       <workItem from="1597771812875" duration="34799000" />
       <workItem from="1597853217212" duration="128317000" />
-      <workItem from="1598154061339" duration="82072000" />
+      <workItem from="1598154061339" duration="97585000" />
     </task>
     <servers />
   </component>

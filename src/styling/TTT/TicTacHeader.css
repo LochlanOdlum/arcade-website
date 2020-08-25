@@ -1,3 +1,15 @@
-.tic-tac-header {
-    height: 10vh;
+.ttt-header {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    background: rgb(30, 30, 30);
+    /*background: #ADE292;*/
+    height: 40px;
+}
+.ttt-name {
+    display: inline-block;
+    padding-top: 8px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: white;
 }

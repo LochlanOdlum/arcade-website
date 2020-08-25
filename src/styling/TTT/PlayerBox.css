@@ -1,4 +1,5 @@
 .player-box-container {
+    padding-top: 20px;
     position: relative;
     border-radius: 15px;
     display: inline-block;
@@ -105,6 +106,7 @@
 }
 @media(max-width: 860px) {
     .player-box-container {
+        padding-top: 5px;
         height: 170px;
         width: 124px;
     }
@@ -119,7 +121,7 @@
     }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 767px) {
     .player-box-container.left {
         margin: 20px 40px 0 0;
     }

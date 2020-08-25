@@ -16,6 +16,7 @@ const TicTacPage = () => {
   if (!gameType) {
     return (
       <>
+        <div className="ttt-page">
         <TicTacHeader />
         <TicTacSelectPopUp
           onlineNick={onlineNick}
@@ -23,6 +24,7 @@ const TicTacPage = () => {
           setGameType={setGameType}
         />
         <TicTacBoard game={game || displayGame} />
+        </div>
       </>
     );
   }
@@ -31,14 +33,18 @@ const TicTacPage = () => {
 
     return (
       <>
+        <div className="ttt-page">
         <TicTacOfflinePage/>
+        </div>
       </>
     );
   }
   if (gameType === 'online') {
     return (
      <>
+       <div className="ttt-page">
        <TicTacOnlinePage name={onlineNick}/>
+       </div>
      </>
     )
   }

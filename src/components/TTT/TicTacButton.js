@@ -9,7 +9,7 @@ const TicTacButton = () => {
       <Link className="nostyle" to="/ttt">
         <div className="game-button">
           <div className="icon">
-            <img className="icon" src="/images/ttt-board.jpg" alt="tic tac toe board" />
+            <img className="icon" src="/images/ttt-board-invert.png" alt="tic tac toe board" />
           </div>
 
           <div className="text">
