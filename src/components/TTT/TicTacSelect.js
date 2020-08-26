@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../styling/TTT/TicTacSelect.css";
 import ErrorNotif from "../ErrorNotif";
 
+
 const TicTacSelect = props => {
   const [currentNick, setCurrentNick] = useState("");
   const [displayError, setDisplayError] = useState(false);

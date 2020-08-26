@@ -4,7 +4,6 @@ import TicTacSelect from "./TicTacSelect";
 import "../../styling/TTT/TicTacPage.css";
 import TicTacOfflinePage from "./TicTacOfflinePage";
 import TicTacOnlinePage from './TicTacOnlinePage';
-import ErrorNotif from "../ErrorNotif";
 
 const TicTacPage = () => {
   const [onlineNick, setOnlineNick] = useState("");
