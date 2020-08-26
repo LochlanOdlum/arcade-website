@@ -1,13 +1,13 @@
 html,
 body {
   min-height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
   margin: 0 0;
 }
 
 .app {
   min-height: 100vh;
-  background: rgb(32, 32, 32) no-repeat fixed;
+  background: rgb(26, 26, 26) no-repeat fixed;
 }
 
 * {
@@ -19,10 +19,6 @@ body {
   cursor: pointer;
 }
 
-.app {
-  height: 100vh;
-  width: 100vw;
-}
 .name {
   /*font-weight: 700;*/
   display: inline-block;
