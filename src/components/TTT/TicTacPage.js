@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import TicTacBoard from "./TicTacBoard";
 import TicTacHeader from "./TicTacHeader";
-import TicTacSelectPopUp from "./TicTacSelectPopUp";
+import TicTacSelect from "./TicTacSelect";
 import "../../styling/TTT/TicTacPage.css";
-import { displayGame} from "../../hooks/useTicTac";
 import TicTacOfflinePage from "./TicTacOfflinePage";
 import TicTacOnlinePage from './TicTacOnlinePage';
-
-const game = null;
+import ErrorNotif from "../ErrorNotif";
 
 const TicTacPage = () => {
   const [onlineNick, setOnlineNick] = useState("");
@@ -18,12 +15,12 @@ const TicTacPage = () => {
       <>
         <div className="ttt-page">
         <TicTacHeader />
-        <TicTacSelectPopUp
+          {/*<ErrorNotif text={"testing hello 123"}/>*/}
+        <TicTacSelect
           onlineNick={onlineNick}
           setOnlineNick={setOnlineNick}
           setGameType={setGameType}
         />
-        <TicTacBoard game={game || displayGame} />
         </div>
       </>
     );

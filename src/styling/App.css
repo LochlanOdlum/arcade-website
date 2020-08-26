@@ -61,3 +61,8 @@ body {
         height: 160px;
     }
 }
+@media (max-width: 400px) {
+  .name {
+    font-size: 25px;
+  }
+}

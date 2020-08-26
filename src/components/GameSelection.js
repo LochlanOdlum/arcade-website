@@ -1,5 +1,6 @@
 import React from "react";
 import TicTacButton from "./TTT/TicTacButton";
+import C4Button from "./C4/C4Button";
 import "../styling/GameSelection.css";
 
 const GameSelection = () => {
@@ -7,9 +8,9 @@ const GameSelection = () => {
     <div className="game-block">
       <div className="game-grid-container">
         <TicTacButton />
+        <C4Button/>
         <TicTacButton />
-        <TicTacButton />
-        <TicTacButton />
+        <C4Button/>
         <TicTacButton />
       </div>
     </div>

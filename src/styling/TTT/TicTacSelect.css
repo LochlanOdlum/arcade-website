@@ -1,15 +1,14 @@
 .ttt-pop-up {
-  margin-top: 12vh;
+  margin: 12vh auto 0 auto;
   border-radius: 10px;
   width: 40%;
   max-width: 500px;
   height: 35vh;
   min-height: 300px;
-  /*background: white;*/
-  background: rgb(240,240,240);
 }
 
 .ttt-pop-up-container {
+  color: white;
   z-index: 50;
   position: relative;;
   height: 35vh;
@@ -55,7 +54,7 @@
 
 
 .ttt-offline-container {
-  margin-top: 5px;
+  margin-top: 10px;
   bottom: 0;
 }
 
