@@ -1,0 +1,44 @@
+.c4-board-block {
+    display: flex;
+    padding-top: 10vh;
+}
+.c4-board-container {
+    margin: auto;
+    border-radius: 10px;
+}
+
+.c4-board {
+    background: rgb(64, 148, 245);
+    margin: auto;
+    display: inline-flex;
+    border-radius: 10px;
+    width: 55vw;
+    max-width: 700px;
+    height: calc(47.1vw + 20px);
+    max-height: calc((700px*6/7 + 20px));
+
+}
+.c4-column {
+    padding-bottom: 20px;
+    flex-grow: 1;
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+}
+.c4-tile {
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px #1D64A8 inset;
+    flex-grow: 1;
+    background: #fff;
+}
+.c4-tile-red {
+    background: #F84E6A;
+    box-shadow: -1px 4px 8px rgba(45, 0, 0, 0.69) inset, -24px -25px 20px #d02647 inset
+
+}
+.c4-tile-yellow {
+    background: rgb(248, 205, 123);
+    box-shadow: -1px 4px 8px #534b1d inset, -24px -25px 20px #f2bd44 inset;
+
+}

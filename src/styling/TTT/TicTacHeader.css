@@ -1,7 +1,6 @@
 .ttt-header {
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
+    position: relative;
+    z-index: 3;
     background: rgb(30, 30, 30);
     /*background: #ADE292;*/
     height: 50px;

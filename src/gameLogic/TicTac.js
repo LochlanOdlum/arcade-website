@@ -90,8 +90,6 @@ export default class TicTacGame extends Game {
         this.winner = this.players.find(p => p.id === playerIDAtPoint);
         this.winningSquares = currentWinningSquares;
         return;
-      } else {
-        //Set current winning squares to blank...
       }
     }
   };

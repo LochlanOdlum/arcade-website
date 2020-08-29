@@ -20,9 +20,9 @@ const TicTacOnlinePage = ({ name }) => {
 
   useEffect(() => {
     playerSelf.name = name;
-    //Local  server port http://10.0.0.118:3005
+    //Local  server port http://10.0.0.126:3005
     //Server URL https://lochlancc-backend.herokuapp.com/
-    socket = io.connect("https://lochlancc-backend.herokuapp.com/");
+    socket = io.connect("http://10.0.0.126:3005");
 
     //Check if connected, wait for response. 'Ping'
     socket.emit("ttt-connect", playerSelf);

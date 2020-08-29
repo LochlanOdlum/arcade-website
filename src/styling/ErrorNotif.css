@@ -6,6 +6,7 @@
 }
 
 .error-block {
+    z-index: 10;
     margin-top: 10px;
     color: white;
     width: 500px;
