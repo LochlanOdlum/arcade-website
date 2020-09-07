@@ -8,6 +8,8 @@ export default class TicTacGame extends Game {
   ];
   ties = 0;
   winningSquares = [[null, null], [null, null], [null, null]];
+  lastResults = [];
+  lastResultsAmount = 7;
 
   constructor(players) {
     if (players.length > 2) {
@@ -15,6 +17,11 @@ export default class TicTacGame extends Game {
     }
 
     super(players);
+
+    const startingPlayer = this.players.find(
+      p => p.value === "x"
+    );
+    this.setCurrentPlayer(startingPlayer);
   }
 
   start = () => {
@@ -86,9 +93,15 @@ export default class TicTacGame extends Game {
           }
         }
 
-        this.status = GameStatus.won;
         this.winner = this.players.find(p => p.id === playerIDAtPoint);
+        this.status = GameStatus.won;
         this.winningSquares = currentWinningSquares;
+
+        this.lastResults.push(this.winner);
+        if (this.lastResults.length > this.lastResultsAmount) {
+          this.lastResults.splice(0, this.lastResults.length-this.lastResultsAmount);
+        }
+
         return;
       }
     }
@@ -131,16 +144,7 @@ export default class TicTacGame extends Game {
       [null, null, null]
     ];
     const otherPlayer = this.players.find((p) => p.id !== this.currentPlayer.id);
-    const swapValue = (player) => {
-      if (player.value === 'x') {
-        player.value = 'o';
-      } else {
-        player.value = 'x';
-      }
-    }
 
-    swapValue(this.currentPlayer);
-    swapValue(otherPlayer);
     this.setCurrentPlayer(otherPlayer);
   };
 

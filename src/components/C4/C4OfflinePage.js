@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 import C4Board from "./C4Board";
 import useC4, { displayGame } from "../../hooks/useC4";
+import SmallHeader from "../SmallHeader";
 
 const offlinePlayers = [
-  { name: "Player 1", value: "red", id: 0, score: 0 },
-  { name: "Player 2", value: "yellow", id: 1, score: 0 }
+  { name: "Player 1", value: "red", id: 1, score: 0 },
+  { name: "Player 2", value: "yellow", id: 2, score: 0 }
 ];
 
 const C4OfflinePage = () => {
   const game = useC4();
 
   const startGame = () => {
-    console.log('hook called');
     game.start(offlinePlayers);
   };
 
@@ -24,11 +24,20 @@ const C4OfflinePage = () => {
     return game;
   };
 
+  const onColumnClick = x => {
+    try {
+      game.takeTurn(game.currentPlayer, x);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
 
   return (
-    <div>
-      <C4Board game={getGame()}/>
-    </div>
+    <>
+      <SmallHeader/>
+      <C4Board game={getGame()} onColumnClick={onColumnClick} myColour={game.currentPlayer?.value}/>
+    </>
   );
 };
 

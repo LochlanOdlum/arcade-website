@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import TicTacHeader from "./TicTacHeader";
+import SmallHeader from "../SmallHeader";
 import TicTacSelect from "./TicTacSelect";
 import "../../styling/TTT/TicTacPage.css";
 import TicTacOfflinePage from "./TicTacOfflinePage";
-import TicTacOnlinePage from './TicTacOnlinePage';
+import TicTacOnlinePage from "./TicTacOnlinePage";
 
 const TicTacPage = () => {
   const [onlineNick, setOnlineNick] = useState("");
@@ -13,36 +13,35 @@ const TicTacPage = () => {
     return (
       <>
         <div className="ttt-page">
-        <TicTacHeader />
+          <SmallHeader />
           {/*<ErrorNotif text={"testing hello 123"}/>*/}
-        <TicTacSelect
-          onlineNick={onlineNick}
-          setOnlineNick={setOnlineNick}
-          setGameType={setGameType}
-        />
+          <TicTacSelect
+            onlineNick={onlineNick}
+            setOnlineNick={setOnlineNick}
+            setGameType={setGameType}
+          />
         </div>
       </>
     );
   }
 
   if (gameType === "offline") {
-
     return (
       <>
         <div className="ttt-page">
-        <TicTacOfflinePage/>
+          <TicTacOfflinePage />
         </div>
       </>
     );
   }
-  if (gameType === 'online') {
+  if (gameType === "online") {
     return (
-     <>
-       <div className="ttt-page">
-       <TicTacOnlinePage name={onlineNick}/>
-       </div>
-     </>
-    )
+      <>
+        <div className="ttt-page">
+          <TicTacOnlinePage name={onlineNick} />
+        </div>
+      </>
+    );
   }
 };
 

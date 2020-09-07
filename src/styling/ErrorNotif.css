@@ -63,3 +63,9 @@
     padding-right: 1px;
     font-weight: 700;
 }
+
+@media (max-width: 620px) {
+    .error-block {
+        width: 300px;
+    }
+}

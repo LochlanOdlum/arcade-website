@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import TicTacHeader from "./TicTacHeader";
+import SmallHeader from "../SmallHeader";
 import TicTacBoard from "./TicTacBoard";
 import useTicTac, { displayGame } from "../../hooks/useTicTac";
 import { GameStatus } from "../../gameLogic/game";
@@ -34,8 +34,8 @@ const TicTacOfflinePage = () => {
 
   return (
     <>
-      <TicTacHeader />
-      <TicTacBoard game={renderGame()} onSquareClick={onSquareClick} />
+      <SmallHeader />
+      <TicTacBoard game={renderGame()} onSquareClick={onSquareClick} myPlayer={game.currentPlayer}/>
     </>
   );
 };

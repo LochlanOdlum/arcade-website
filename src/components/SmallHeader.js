@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../styling/TTT/TicTacHeader.css';
+import '../styling/TTT/TicTacHeader.css';
 
-const TicTacHeader = () => {
+const SmallHeader = () => {
 
   return (
     <div className="ttt-header">
@@ -13,4 +13,4 @@ const TicTacHeader = () => {
   );
 };
 
-export default TicTacHeader;
+export default SmallHeader;

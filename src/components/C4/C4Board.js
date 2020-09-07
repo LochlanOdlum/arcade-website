@@ -1,23 +1,28 @@
-import React, { useEffect, useRef } from "react";
-import useC4 from "../../hooks/useC4";
+import React from "react";
 import "../../styling/C4/C4Board.css";
+import C4PlayerBox from "./C4PlayerBox";
+import { GameStatus } from "../../gameLogic/game";
 
-const players = [
-  { id: "1", name: "Player 1", value: "red", score: 0 },
-  { id: "0", name: "Player 2", value: "yellow", score: 0 }
-];
+const C4Board = ({ game, onColumnClick, myColour}) => {
+  const renderTileValue = ([x, y]) => {
+    const playerIDAtTile = game.board[x][y];
+    const playerAtTile = game.players.find(p => p.id === playerIDAtTile);
 
-const C4Board = ({game}) => {
-  //Remove effect to start game once board starts, instead have seperate online and offline pages that will create
-  //a game and pass game down to C4Board component.
-console.log(game);
-
-  const onColumnClick = x => {
-    try {
-      game.takeTurn(game.currentPlayer, x);
-    } catch (error) {
-      console.error(error);
+    if (playerAtTile) {
+      return playerAtTile.value === "red" ? "c4-tile-red" : "c4-tile-yellow";
     }
+
+    if (
+      game.status === GameStatus.inGame &&
+      myColour === game.currentPlayer?.value &&
+      (y >= game.board[x].length - 1 || game.board[x][y + 1])
+    ) {
+      return game.currentPlayer.value === "red"
+        ? "c4-next-active-tile-red"
+        : "c4-next-active-tile-yellow";
+    }
+
+    return "";
   };
 
   const renderBoard = () => {
@@ -41,19 +46,24 @@ console.log(game);
       </div>
     ));
   };
-  const renderTileValue = ([x, y]) => {
-    const playerIDAtTile = game.board[x][y];
-    const playerAtTile = game.players.find(p => p.id === playerIDAtTile);
-
-    if (!playerAtTile) {
-      return "";
-    }
-    return playerAtTile.value === "red" ? "c4-tile-red" : "c4-tile-yellow";
-  };
 
   return (
     <div className="c4-board-block">
-        <div className="c4-board">{renderBoard()}</div>
+      <C4PlayerBox
+        game={game}
+        name={game.players[0].name}
+        id={game.players[0].id}
+        value={game.players[0].value}
+        side="left"
+      />
+      <div className="c4-board">{renderBoard()}</div>
+      <C4PlayerBox
+        game={game}
+        name={game.players[1].name}
+        id={game.players[1].id}
+        value={game.players[1].value}
+        side="right"
+      />
     </div>
   );
 };

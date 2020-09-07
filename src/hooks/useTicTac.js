@@ -58,6 +58,7 @@ const useTicTac = () => {
     leave,
     playAgain,
     winningSquares: game?.winningSquares,
+    lastResults: game?.lastResults,
     ties: game?.ties,
     board: game?.board,
     players: game?.players,

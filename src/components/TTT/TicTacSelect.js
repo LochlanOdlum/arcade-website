@@ -45,7 +45,10 @@ const TicTacSelect = props => {
       {renderError()}
       <div className="ttt-pop-up">
         <div className="ttt-pop-up-container">
-          <div className="ttt-pop-up-title">Tic-Tac-Toe</div>
+          <div className="ttt-pop-up-title">
+            <span className="ttt-title-yellow">T</span><span className="ttt-title-red">I</span><span className="ttt-title-yellow">C</span>
+            <span className="ttt-title-red"> T</span><span className="ttt-title-yellow">A</span><span className="ttt-title-red">C </span>
+            <span className="ttt-title-yellow">T</span><span className="ttt-title-red">O</span><span className="ttt-title-yellow">E</span></div>
 
           <div className="ttt-pop-up-center-block">
             <input

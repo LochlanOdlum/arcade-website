@@ -1,0 +1,71 @@
+.ttt.player-box-container {
+    background: rgb(51, 34, 103);
+}
+
+.ttt-player-box-value-container-cross {
+    margin-top: 5px;
+}
+.ttt-player-box-value-container-circle {
+    margin-top: 5px;
+}
+
+.ttt-player-box-icon {
+    margin-top: 10px;
+    width: 53px;
+}
+
+.mini-cross-up {
+    transform: rotate(45deg)
+}
+.mini-cross-down {
+    transform: rotate(-45deg)
+}
+
+.mini-circle {
+    position: absolute;
+    background: rgb(255, 208, 51);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.mini-circle-outer {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%
+}
+.mini-circle-inner {
+    margin-top: 16px;
+    z-index: 1;
+    background: rgb(51, 34, 103);
+
+    width: 22px;
+    height: 22px;
+}
+
+@media(max-width: 860px) {
+    .mini-circle-outer {
+        width: 40px;
+        height: 40px;
+    }
+    .mini-circle-inner{
+        margin-top: 12px;
+        width: 16px;
+        height: 16px;
+    }
+    .ttt-player-box-icon {
+        width: 45px;
+        margin-top: 10px;
+    }
+}
+@media(max-width: 860px) {
+    .mini-cross {
+        margin-top: 15px;
+        width: 40px;
+        height: 13px;
+    }
+}
+

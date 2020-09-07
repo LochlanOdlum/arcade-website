@@ -2,19 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac45995a-7752-4883-b4e2-83d5a747ce9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/C4/C4Board.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/C4/C4OfflinePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/C4/C4OnlinePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/C4/C4Page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/C4/C4SelectMode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useC4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styling/C4/C4Board.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/user-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/C4/C4PlayerBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gameLogic/C4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styling/C4/C4Page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styling/C4/C4PlayerBox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styling/PlayerBox.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/C4/C4Board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4Board.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/C4/C4OfflinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4OfflinePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/C4/C4OnlinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4OnlinePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/C4/C4Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4Page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TTT/PlayerBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacPlayerBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SmallHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacOfflinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacOfflinePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacOnlinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacOnlinePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacSelect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameLogic/TicTac.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/TicTac.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameLogic/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useC4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useC4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useTicTac.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useTicTac.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styling/C4/C4Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/C4/C4Board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styling/ErrorNotif.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/ErrorNotif.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/TTT/TicTacHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/TicTacHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styling/TTT/PlayerBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/TicTacPlayerBox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styling/TTT/TicTacBoard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/TicTacBoard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styling/TTT/TicTacSelect.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/TicTacSelect.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -50,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../newProjects/translate" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/method-draw-image.svg" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,12 +76,22 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\lodlu\Documents\dev\game-website\src\styling\C4" />
+      <recent name="C:\Users\lodlu\Documents\dev\game-website\public\fonts " />
       <recent name="C:\Users\lodlu\Documents\dev\game-website\public\images" />
+      <recent name="C:\Users\lodlu\Documents\dev\game-website\src\components\" />
+      <recent name="C:\Users\lodlu\Documents\dev\game-website\src\styling\C4" />
       <recent name="C:\Users\lodlu\Documents\dev\game-website\src\components\TTT" />
-      <recent name="C:\Users\lodlu\Documents\dev\game-website\src\styling\TTT" />
-      <recent name="C:\Users\lodlu\Documents\dev\game-website\public" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="test.mjs" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$APPLICATION_CONFIG_DIR$/scratches/test.mjs" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.test.mjs" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -92,7 +118,8 @@
       <workItem from="1597771812875" duration="34799000" />
       <workItem from="1597853217212" duration="128317000" />
       <workItem from="1598154061339" duration="168249000" />
-      <workItem from="1598641292180" duration="8884000" />
+      <workItem from="1598641292180" duration="38230000" />
+      <workItem from="1598972571955" duration="51454000" />
     </task>
     <servers />
   </component>
@@ -108,14 +135,34 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="710" y="300" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1112/2560.133.1920.1040@0.0.2048.1112" timestamp="1597872765961" />
-    <state x="285" y="284" key="FileChooserDialogImpl" timestamp="1598409263409">
+    <state x="285" y="284" key="FileChooserDialogImpl" timestamp="1599359678711">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="285" y="284" key="FileChooserDialogImpl/0.0.2048.1112/2560.133.1920.1040@0.0.2048.1112" timestamp="1598409263409" />
+    <state x="285" y="284" key="FileChooserDialogImpl/0.0.2048.1112/2560.133.1920.1040@0.0.2048.1112" timestamp="1599359678711" />
+    <state width="1952" height="259" key="GridCell.Tab.0.bottom" timestamp="1599059727938">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1952" height="259" key="GridCell.Tab.0.bottom/0.0.2048.1112/2560.133.1920.1040@0.0.2048.1112" timestamp="1599059727938" />
+    <state width="1952" height="259" key="GridCell.Tab.0.center" timestamp="1599059727937">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1952" height="259" key="GridCell.Tab.0.center/0.0.2048.1112/2560.133.1920.1040@0.0.2048.1112" timestamp="1599059727937" />
+    <state width="1952" height="259" key="GridCell.Tab.0.left" timestamp="1599059727937">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1952" height="259" key="GridCell.Tab.0.left/0.0.2048.1112/2560.133.1920.1040@0.0.2048.1112" timestamp="1599059727937" />
+    <state width="1952" height="259" key="GridCell.Tab.0.right" timestamp="1599059727938">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1952" height="259" key="GridCell.Tab.0.right/0.0.2048.1112/2560.133.1920.1040@0.0.2048.1112" timestamp="1599059727938" />
     <state x="618" y="172" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597897014602">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="618" y="172" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2048.1112/2560.133.1920.1040@0.0.2048.1112" timestamp="1597897014602" />
+    <state x="652" y="247" key="run.anything.popup" timestamp="1599059059180">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="652" y="247" key="run.anything.popup/0.0.2048.1112/2560.133.1920.1040@0.0.2048.1112" timestamp="1599059059180" />
     <state x="658" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1598585104135">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

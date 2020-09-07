@@ -1,5 +1,5 @@
 .ttt-board-block {
-    margin-top: 10vh;
+    margin-top: 6vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,7 +8,6 @@
 .board-container {
     display: flex;
 }
-
 
 .board {
     order: 2;
@@ -56,6 +55,9 @@
 .cross-square-won {
     background: #fff;
 }
+.cross-square-loss {
+    background: #fff;
+}
 
 .cross-up {
     transform: rotate(45deg)
@@ -70,6 +72,9 @@
     border-radius: 50%
 }
 .circle-square-won {
+    background: #fff;
+}
+.circle-square-loss {
     background: #fff;
 }
 
@@ -88,8 +93,15 @@
     background: rgb(39,208,117);
 }
 
+.circle-inner.circle-square-loss {
+    background: rgb(233, 40, 40);
+}
+
 .square-won {
     background: rgb(39,208,117);
+}
+.square-loss {
+    background: rgb(233, 40, 40);
 }
 
 
@@ -99,10 +111,10 @@
 }
 
 .score-container {
-    margin-top: 20px;
     display: flex;
-    width: 55vh;
-    height: 75px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 55vw;
 }
 
 .player1 {
@@ -137,6 +149,26 @@
     font-size: 30px;
     margin-top: 10px;
 }
+
+.ttt-score-icon {
+    margin: 0 5px 0 5px;
+    width: 55px;
+}
+
+
+
+@media(max-width: 860px) {
+    .ttt-score-icon {
+        width: 35px;
+    }
+    .score-container {
+        margin-top: 10px;
+    }
+}
+
+
+
+
 @media(max-width: 1050px) {
     .board {
         width: 40vw;

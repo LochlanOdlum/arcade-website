@@ -16,11 +16,6 @@ export default class Game {
     this.players = players;
     this.currentPlayer = players[0];
 
-    const startingPlayer = [players[0], players[1]].find(
-      p => p.value === "x"
-    );
-    this.setCurrentPlayer(startingPlayer);
-
   }
 
 

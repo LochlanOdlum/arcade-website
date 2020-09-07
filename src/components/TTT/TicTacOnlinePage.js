@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import TicTacHeader from "./TicTacHeader";
+import SmallHeader from "../SmallHeader";
 import TicTacBoard from "./TicTacBoard";
 import useTicTac, { displayGame } from "../../hooks/useTicTac";
 import io from "socket.io-client";
@@ -20,9 +20,9 @@ const TicTacOnlinePage = ({ name }) => {
 
   useEffect(() => {
     playerSelf.name = name;
-    //Local  server port http://10.0.0.126:3005
+    //Local  server port http://10.0.0.120:3005
     //Server URL https://lochlancc-backend.herokuapp.com/
-    socket = io.connect("http://10.0.0.126:3005");
+    socket = io.connect("https://lochlancc-backend.herokuapp.com/");
 
     //Check if connected, wait for response. 'Ping'
     socket.emit("ttt-connect", playerSelf);
@@ -39,7 +39,6 @@ const TicTacOnlinePage = ({ name }) => {
         players[players.findIndex(p => p.id !== playerSelf.id)];
       playerSelf.value = updatedPlayerSelf.value;
       playerOther = updatedPlayerOther;
-
       startOnlineGame([playerSelf, updatedPlayerOther]);
     });
 
@@ -94,8 +93,8 @@ const TicTacOnlinePage = ({ name }) => {
   return (
     <>
       {renderLoading()}
-      <TicTacHeader />
-      <TicTacBoard game={renderGame()} onSquareClick={onSquareClick} />
+      <SmallHeader />
+      <TicTacBoard game={renderGame()} onSquareClick={onSquareClick} myPlayer={playerSelf} />
     </>
   );
 };
