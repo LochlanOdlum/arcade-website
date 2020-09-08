@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac45995a-7752-4883-b4e2-83d5a747ce9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styling/C4/C4SelectMode.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/C4/C4OnlinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4OnlinePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/C4/C4PlayerBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4PlayerBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/C4/C4SelectMode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4SelectMode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameLogic/C4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/C4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/C4/C4PlayerBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/C4/C4PlayerBox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/TTT/TicTacSelect.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/TicTacSelect.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SmallHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SmallHeader.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +95,7 @@
       <workItem from="1597853217212" duration="128317000" />
       <workItem from="1598154061339" duration="168249000" />
       <workItem from="1598641292180" duration="38230000" />
-      <workItem from="1598972571955" duration="60311000" />
+      <workItem from="1598972571955" duration="60890000" />
     </task>
     <servers />
   </component>
