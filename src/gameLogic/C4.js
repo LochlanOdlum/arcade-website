@@ -47,9 +47,12 @@ export default class C4Game extends Game {
 
     this.board[x][lowestY] = player.id;
 
-    this.goToNextPlayer();
     this.checkForWinAtPoint([x, lowestY]);
     this.checkForDraw();
+
+    if (this.status === GameStatus.inGame) {
+      this.goToNextPlayer();
+    }
   };
 
   checkForDraw = () => {

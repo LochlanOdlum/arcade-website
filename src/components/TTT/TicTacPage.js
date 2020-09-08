@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SmallHeader from "../SmallHeader";
-import TicTacSelect from "./TicTacSelect";
+import TicTacSelectMode from "./TicTacSelectMode";
 import "../../styling/TTT/TicTacPage.css";
 import TicTacOfflinePage from "./TicTacOfflinePage";
 import TicTacOnlinePage from "./TicTacOnlinePage";
@@ -15,7 +15,7 @@ const TicTacPage = () => {
         <div className="ttt-page">
           <SmallHeader />
           {/*<ErrorNotif text={"testing hello 123"}/>*/}
-          <TicTacSelect
+          <TicTacSelectMode
             onlineNick={onlineNick}
             setOnlineNick={setOnlineNick}
             setGameType={setGameType}

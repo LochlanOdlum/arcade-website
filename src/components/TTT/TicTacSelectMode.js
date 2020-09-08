@@ -1,25 +1,12 @@
 import React, { useState } from "react";
-import "../../styling/TTT/TicTacSelect.css";
+import "../../styling/TTT/TicTacSelectMode.css";
 import ErrorNotif from "../ErrorNotif";
 
 
-const TicTacSelect = props => {
+const TicTacSelectMode = props => {
   const [currentNick, setCurrentNick] = useState("");
   const [displayError, setDisplayError] = useState(false);
-  const [enableTimeOut, setEnableTimeOut] = useState(true);
 
-  const renderError = () => {
-    if (displayError === true) {
-      if (enableTimeOut) {
-        setEnableTimeOut(false);
-        setTimeout(() => {
-          setDisplayError(false);
-          setEnableTimeOut(true);
-        }, 5000);
-      }
-      return <ErrorNotif text="You must enter a nickname to play Online!" />;
-    }
-  };
 
   const onInputChange = event => {
     if (event.target.value.length < 12) {
@@ -28,8 +15,13 @@ const TicTacSelect = props => {
   };
 
   const onOnlineClick = () => {
-    if (currentNick === "") {
+
+    if (!currentNick && !displayError) {
       setDisplayError(true);
+      setTimeout(() => {
+        setDisplayError(false);
+      }, 5000);
+    } else if (!currentNick) {
     } else {
       props.setOnlineNick(currentNick);
       props.setGameType("online");
@@ -38,6 +30,12 @@ const TicTacSelect = props => {
 
   const onOfflineClick = () => {
     props.setGameType("offline");
+  };
+
+  const renderError = () => {
+    if (displayError) {
+      return <ErrorNotif text="You must enter a nickname to play Online!" />;
+    }
   };
 
   return (
@@ -63,7 +61,7 @@ const TicTacSelect = props => {
               id="ttt-play-online"
               onClick={onOnlineClick}
             >
-              Play Online
+              Play Online!
             </div>
 
             <div className="ttt-offline-container">
@@ -73,7 +71,7 @@ const TicTacSelect = props => {
                 id="ttt-play-offline"
                 onClick={onOfflineClick}
               >
-                Play Offline
+                Play Offline!
               </div>
             </div>
           </div>
@@ -83,4 +81,4 @@ const TicTacSelect = props => {
   );
 };
 
-export default TicTacSelect;
+export default TicTacSelectMode;

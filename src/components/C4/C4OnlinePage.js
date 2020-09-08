@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import C4Board from "./C4Board";
 import io from 'socket.io-client';
 import {displayGame} from "../../hooks/useC4";
 import useC4 from "../../hooks/useC4";
+import LoadingOverlay from "../LoadingOverlay";
 
 let socket = '';
 const randomID = () => {
@@ -13,6 +14,9 @@ let playerOther = { name: "", id: "", value: "", score: 0 };
 
 
 const C4OnlinePage = ({name}) => {
+  const [connected, setConnected] = useState(false);
+  const [matchFound, setMatchFound] = useState(false);
+
   const game = useC4();
   playerSelf.name = name;
 
@@ -23,6 +27,7 @@ const C4OnlinePage = ({name}) => {
 
     socket.emit('C4-connect', playerSelf);
     socket.on('C4-connected', () => {
+      setConnected(true)
     });
     socket.on('C4-match-found', (playersData) => {
       const updatedPlayerSelf =
@@ -32,6 +37,8 @@ const C4OnlinePage = ({name}) => {
       playerSelf.value = updatedPlayerSelf.value;
       playerOther = updatedPlayerOther;
       game.start(playersData);
+
+      setMatchFound(true);
     });
     socket.on('C4-turn-taken', (x) => {
       game.takeTurn(playerOther, x);
@@ -55,8 +62,20 @@ const C4OnlinePage = ({name}) => {
     }
   };
 
+  const renderLoading = () => {
+    if (!connected) {
+      return <LoadingOverlay text={"Connecting to server..."} />;
+    }
+    if (connected && !matchFound) {
+      return (
+        <LoadingOverlay text={"Joined queue. Searching for other players..."} />
+      );
+    }
+  };
+
   return (
     <div>
+      {renderLoading()}
       <C4Board game={getGame()} onColumnClick={onColumnClick} myColour={playerSelf.value} />
     </div>
   )

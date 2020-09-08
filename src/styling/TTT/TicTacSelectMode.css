@@ -70,13 +70,13 @@
 }
 
 #ttt-play-offline {
-  background: rgb(204, 44, 161);
+  background: rgb(215, 57, 172);
   margin-top: 0;
   bottom: 0;
 }
 
 #ttt-play-offline:hover {
-  background: #ac2387;
+  background: rgb(176, 47, 141);
 }
 
 .ttt-play:hover {

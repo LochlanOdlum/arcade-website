@@ -1,3 +1,23 @@
 .C4.player-box-container {
     background: rgb(51, 34, 103);
 }
+
+.c4-mini-piece {
+    margin: 10px auto 0 auto;
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+}
+
+.c4-mini-piece-red {
+    background: #F84E6A;
+    box-shadow: -1px 4px 8px rgba(45, 0, 0, 0.69) inset, -24px -25px 20px #d02647 inset;
+    border: 1px solid #fff;
+}
+
+.c4-mini-piece-yellow {
+    background: rgb(248, 205, 123);
+    box-shadow: -1px 4px 8px #625217 inset, -24px -25px 20px #dbb318 inset;
+    border: 1px solid #fff;
+}

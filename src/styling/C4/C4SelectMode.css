@@ -1,0 +1,61 @@
+.C4-select-container {
+    margin: 18vh auto 0 auto;
+    width: 80vw;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.C4-title-yellow {
+    display: inline;
+    font-size: 90px;
+    font-family: digitaltmedium, serif;
+    color: rgb(255, 208, 51);
+}
+.C4-title-red {
+    display: inline;
+    font-size: 90px;
+    font-family: digitaltmedium, serif;
+    color: rgb(235, 23, 80);
+}
+
+.C4-nick-input {
+    width: 50%;
+    font-size: 16px;
+    padding-left: 10px;
+    border-radius: 4px;
+    border-color: #a2a2a2;
+    height: 32px;
+}
+
+.C4-play {
+    width: 50%;
+    border-radius: 4px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.C4-play-online {
+    margin-top: 10px;
+    background: rgb(248, 118, 107);
+}
+.C4-play-online:hover {
+    background: rgb(196, 75, 64);
+}
+
+.C4-play-offline {
+    background: rgb(215, 57, 172);
+}
+.C4-play-offline:hover {
+    background: rgb(176, 47, 141);
+}
+
+.C4-or-text {
+    margin-top: 10px;
+    color: white;
+}

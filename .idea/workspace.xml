@@ -2,35 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac45995a-7752-4883-b4e2-83d5a747ce9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/user-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/C4/C4PlayerBox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gameLogic/C4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styling/C4/C4Page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styling/C4/C4PlayerBox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styling/PlayerBox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styling/C4/C4SelectMode.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/C4/C4Board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4Board.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/C4/C4OfflinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4OfflinePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/C4/C4OnlinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4OnlinePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/C4/C4Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4Page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TTT/PlayerBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacPlayerBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SmallHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacOfflinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacOfflinePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacOnlinePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacOnlinePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/C4/C4PlayerBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4PlayerBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/C4/C4SelectMode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4SelectMode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TTT/TicTacSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TTT/TicTacSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameLogic/TicTac.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/TicTac.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameLogic/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useC4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useC4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useTicTac.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useTicTac.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/C4/C4Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/C4/C4Board.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/ErrorNotif.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/ErrorNotif.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/TTT/PlayerBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/TicTacPlayerBox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/TTT/TicTacBoard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/TicTacBoard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameLogic/C4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/C4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styling/C4/C4PlayerBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/C4/C4PlayerBox.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styling/TTT/TicTacSelect.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/TTT/TicTacSelect.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,13 +35,16 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1gHW530PJgsCeFUw7bS6eSoYhUo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -119,12 +101,15 @@
       <workItem from="1597853217212" duration="128317000" />
       <workItem from="1598154061339" duration="168249000" />
       <workItem from="1598641292180" duration="38230000" />
-      <workItem from="1598972571955" duration="51454000" />
+      <workItem from="1598972571955" duration="60311000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="784" y="292" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598154079322">

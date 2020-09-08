@@ -9,18 +9,14 @@ const TicTacPlayerBox = ({ side, name, game, id, value }) => {
     if (value === "red") {
       return (
         <>
-          <div className="ttt-player-box-value-container-cross">
             <div className="c4-mini-piece-red c4-mini-piece" />
-          </div>
         </>
       );
     }
 
     return (
       <>
-        <div className="ttt-player-box-value-container-circle">
           <div className="c4-mini-piece-yellow c4-mini-piece" />
-        </div>
       </>
     );
   };
