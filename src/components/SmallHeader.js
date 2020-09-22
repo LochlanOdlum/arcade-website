@@ -2,7 +2,7 @@ import React from 'react';
 import '../styling/TTT/TicTacHeader.css';
 
 const SmallHeader = () => {
-    
+
   return (
     <div className="ttt-header">
               <span className="ttt-name">

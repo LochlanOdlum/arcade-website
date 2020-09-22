@@ -62,3 +62,34 @@
     opacity: 0.6;
     box-shadow: -1px 4px 8px #625217 inset, -24px -25px 20px #dbb318 inset;
 }
+
+@media (max-width: 1080px) {
+    .c4-tile {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 880px) {
+    .c4-tile {
+        margin: 4px;
+    }
+}
+
+@media (max-width: 767px) {
+    .c4-board {
+        order: 4;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 70vw;
+    }
+    .break {
+        order: 3;
+        width: 100%;
+    }
+    .c4-board-block {
+        padding-top: 0;
+        flex-wrap: wrap;
+        width: 100vw;
+        justify-content: center;
+    }
+}

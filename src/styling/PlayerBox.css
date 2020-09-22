@@ -77,10 +77,10 @@
 
 @media (max-width: 767px) {
     .player-box-container.left {
-        margin: 20px 40px 0 0;
+        margin: 20px 40px 10px 0;
     }
     .player-box-container.right {
-        margin: 20px 0 0 40px;
+        margin: 20px 0 10px 40px;
         order: 2;
     }
 }
