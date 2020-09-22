@@ -56,6 +56,7 @@ const C4Board = ({ game, onColumnClick, myColour}) => {
         value={game.players[0].value}
         side="left"
       />
+        <div className="break" />
       <div className="c4-board">{renderBoard()}</div>
       <C4PlayerBox
         game={game}

@@ -6,8 +6,8 @@ const SmallHeader = () => {
   return (
     <div className="ttt-header">
               <span className="ttt-name">
-                <a className="nostyle header-link" href="http://arcade.lochlan.cc">Arcade ||</a>
-                <a className="nostyle header-link" href="http://arcade.lochlan.cc"> Lochlan.cc</a>
+                <a className="nostyle header-link" href='/'>Arcade ||</a>
+                <a className="nostyle header-link" href='/'> Lochlan.cc</a>
               </span>
     </div>
   );

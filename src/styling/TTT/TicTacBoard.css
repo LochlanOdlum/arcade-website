@@ -153,6 +153,7 @@
 .ttt-score-icon {
     margin: 0 5px 0 5px;
     width: 55px;
+    height: 55px;
 }
 
 
@@ -160,6 +161,7 @@
 @media(max-width: 860px) {
     .ttt-score-icon {
         width: 35px;
+        height: 35px;
     }
     .score-container {
         margin-top: 10px;
