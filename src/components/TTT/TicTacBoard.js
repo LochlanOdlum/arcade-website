@@ -18,7 +18,6 @@ const confettiConfig = {
   colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
 };
 
-//TODO: Mobile support styling, flip board and player box order on certain screen widths etc.
 const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
   console.log(game.lastResults);
   const [shouldRenderConfetti, setShouldRenderConfetti] = useState(false);
@@ -117,6 +116,7 @@ const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
   };
 
   const renderScore = () => {
+    console.log(game.lastResults);
     return game.lastResults?.map(result => {
       if (result === "tie") {
         return "";
@@ -156,24 +156,6 @@ const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
 
       <div className="score-container">
         {renderScore()}
-        {/*<div className="player1 score">*/}
-        {/*  <div className={`score-id${highlightCurrentPlayer(game.players[0])}`}>*/}
-        {/*    {game.players[0].name}: ({game.players[0].value})*/}
-        {/*  </div>*/}
-        {/*  <div className="score-value">{game.players[0].score}</div>*/}
-        {/*</div>*/}
-
-        {/*<div className="ties score">*/}
-        {/*  <div className="score-id">Tie</div>*/}
-        {/*  <div className="score-value">{game.ties}</div>*/}
-        {/*</div>*/}
-
-        {/*<div className="player2 score">*/}
-        {/*  <div className={`score-id${highlightCurrentPlayer(game.players[1])}`}>*/}
-        {/*    {game.players[1].name}: ({game.players[1].value})*/}
-        {/*  </div>*/}
-        {/*  <div className="score-value">{game.players[1].score}</div>*/}
-        {/*</div>*/}
       </div>
     </div>
   );

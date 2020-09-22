@@ -47,6 +47,7 @@ const useC4 = () => {
     leave,
 
     winningTiles: game?.winningTiles,
+    lastResults: game?.lastResults,
     ties: game?.ties,
     board: game?.board,
     players: game?.players,

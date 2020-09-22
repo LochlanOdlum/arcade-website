@@ -4,6 +4,8 @@ export default class C4Game extends Game {
   board = new Array(7).fill([]).map(() => [null, null, null, null, null, null]);
   ties = 0;
   winningTiles = [];
+  lastResults = [];
+  lastResultsAmount = 7;
 
   constructor(players) {
     if (players.length > 2) {
@@ -70,6 +72,7 @@ export default class C4Game extends Game {
     if (nullCount === 0) {
       this.ties += 1;
       this.status = GameStatus.draw;
+      //TODO: Add Tie symbol and then push 'tie' to last results here on draw.
     }
   };
 
@@ -114,6 +117,12 @@ export default class C4Game extends Game {
         winningPlayer.score +=1;
         this.winner = winningPlayer;
         this.winningTiles = currentWinningTiles;
+
+        this.lastResults.push(this.winner);
+        if (this.lastResults.length > this.lastResultsAmount) {
+          this.lastResults.splice(0, this.lastResults.length-this.lastResultsAmount);
+        }
+
         return;
       }
 
@@ -127,16 +136,7 @@ export default class C4Game extends Game {
     this.board = new Array(7).fill([]).map(() => [null, null, null, null, null, null]);
 
     const otherPlayer = this.players.find((p) => p.id !== this.currentPlayer.id);
-    const swapValue = (player) => {
-      if (player.value === 'red') {
-        player.value = 'yellow';
-      } else {
-        player.value = 'red';
-      }
-    };
 
-    swapValue(this.currentPlayer);
-    swapValue(otherPlayer);
     this.setCurrentPlayer(otherPlayer);
   };
 

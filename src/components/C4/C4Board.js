@@ -47,25 +47,50 @@ const C4Board = ({ game, onColumnClick, myColour}) => {
     ));
   };
 
+  const renderScore = () => {
+    console.log(game);
+    return game.lastResults?.map(result => {
+      if (result === "tie") {
+        return "";
+      }
+      if (result.value === "red") {
+        return (
+           <div className="c4-score-icon c4-score-icon-red"/>
+        );
+      }
+      return (
+          <div className="c4-score-icon c4-score-icon-yellow"/>
+      );
+    });
+  };
+
+
   return (
-    <div className="c4-board-block">
-      <C4PlayerBox
-        game={game}
-        name={game.players[0].name}
-        id={game.players[0].id}
-        value={game.players[0].value}
-        side="left"
-      />
-        <div className="break" />
-      <div className="c4-board">{renderBoard()}</div>
-      <C4PlayerBox
-        game={game}
-        name={game.players[1].name}
-        id={game.players[1].id}
-        value={game.players[1].value}
-        side="right"
-      />
+    <>
+      <div className="c4-board-block">
+        <C4PlayerBox
+          game={game}
+          name={game.players[0].name}
+          id={game.players[0].id}
+          value={game.players[0].value}
+          side="left"
+        />
+          <div className="break" />
+        <div className="c4-board">{renderBoard()}</div>
+        <C4PlayerBox
+          game={game}
+          name={game.players[1].name}
+          id={game.players[1].id}
+          value={game.players[1].value}
+          side="right"
+        />
+      </div>
+
+      <div className="c4-score-container">
+      {renderScore()}
     </div>
+
+    </>
   );
 };
 

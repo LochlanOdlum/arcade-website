@@ -60,6 +60,15 @@
         margin: 12vh 70px 0 30px;
     }
 }
+@media (max-width: 1080px) {
+    .player-box-container.left {
+         margin: 12vh 30px 0 30px;
+     }
+    .player-box-container.right {
+         margin: 12vh 30px 0 30px;
+     }
+}
+
 @media(max-width: 860px) {
     .player-box-container {
         padding-top: 5px;
