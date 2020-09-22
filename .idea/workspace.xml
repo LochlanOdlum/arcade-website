@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac45995a-7752-4883-b4e2-83d5a747ce9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/C4/C4Board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/C4/C4Board.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SmallHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SmallHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/C4/C4Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/C4/C4Board.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styling/PlayerBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styling/PlayerBox.css" afterDir="false" />
-    </list>
+    <list default="true" id="ac45995a-7752-4883-b4e2-83d5a747ce9a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +100,7 @@
       <workItem from="1598154061339" duration="168249000" />
       <workItem from="1598641292180" duration="38230000" />
       <workItem from="1598972571955" duration="60890000" />
-      <workItem from="1600736573782" duration="5093000" />
+      <workItem from="1600736573782" duration="5369000" />
     </task>
     <servers />
   </component>
