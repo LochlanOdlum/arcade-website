@@ -18,6 +18,7 @@ const confettiConfig = {
   colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
 };
 
+//TODO: Mobile support styling, flip board and player box order on certain screen widths etc.
 const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
   console.log(game.lastResults);
   const [shouldRenderConfetti, setShouldRenderConfetti] = useState(false);
