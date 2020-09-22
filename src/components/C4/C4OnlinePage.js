@@ -24,7 +24,7 @@ const C4OnlinePage = ({name}) => {
   useEffect(() => {
     //Local  server port http://10.0.0.126:3005
     //Server URL https://lochlancc-backend.herokuapp.com/
-    socket = io('http://10.0.0.117:3005');
+    socket = io('https://lochlancc-backend.herokuapp.com/');
 
     socket.emit('C4-connect', playerSelf);
     socket.on('C4-connected', () => {
