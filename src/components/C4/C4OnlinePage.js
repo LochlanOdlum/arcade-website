@@ -5,6 +5,7 @@ import {displayGame} from "../../hooks/useC4";
 import useC4 from "../../hooks/useC4";
 import LoadingOverlay from "../LoadingOverlay";
 import {GameStatus} from "../../gameLogic/game";
+import SmallHeader from "../SmallHeader";
 
 let socket = '';
 const randomID = () => {
@@ -86,6 +87,7 @@ const C4OnlinePage = ({name}) => {
   return (
     <div>
       {renderLoading()}
+      <SmallHeader/>
       <C4Board game={getGame()} onColumnClick={onColumnClick} myColour={playerSelf.value} />
     </div>
   )
