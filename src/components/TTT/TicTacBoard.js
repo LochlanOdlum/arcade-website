@@ -119,7 +119,7 @@ const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
     console.log(game.lastResults);
     return game.lastResults?.map(result => {
       if (result === "tie") {
-        return "";
+        return <img className="ttt-tie-icon ttt-score-icon" alt="small tie" src="/images/tie.svg" />;
       }
       if (result.value === "x") {
         return (

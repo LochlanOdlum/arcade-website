@@ -76,11 +76,13 @@
     margin: 0 5px 0 5px;
 }
 .c4-score-icon-red {
+    border: 1px solid white;
     background: #F84E6A;
     box-shadow: -1px 4px 8px rgba(45, 0, 0, 0.69) inset, -24px -25px 20px #d02647 inset;
 }
 
 .c4-score-icon-yellow {
+    border: 1px solid white;
     background: rgb(248, 205, 123);
     box-shadow: -1px 4px 8px #625217 inset, -24px -25px 20px #dbb318 inset;
 }

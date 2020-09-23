@@ -51,7 +51,7 @@ const C4Board = ({ game, onColumnClick, myColour}) => {
     console.log(game);
     return game.lastResults?.map(result => {
       if (result === "tie") {
-        return "";
+        return <img className="c4-tie-icon c4-score-icon" alt="small tie" src="/images/tie.svg" />;
       }
       if (result.value === "red") {
         return (

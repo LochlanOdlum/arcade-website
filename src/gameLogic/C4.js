@@ -72,7 +72,11 @@ export default class C4Game extends Game {
     if (nullCount === 0) {
       this.ties += 1;
       this.status = GameStatus.draw;
-      //TODO: Add Tie symbol and then push 'tie' to last results here on draw.
+
+      this.lastResults.push('tie');
+      if (this.lastResults.length > this.lastResultsAmount) {
+        this.lastResults.splice(0, this.lastResults.length-this.lastResultsAmount);
+      }
     }
   };
 
