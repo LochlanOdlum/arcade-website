@@ -40,6 +40,9 @@ const useTicTac = () => {
     forceUpdate();
   };
 
+  const bestMove = (player) => {
+    return game.bestMove(player);
+  };
 
   const leave = player => {
     game.leave(player);
@@ -54,6 +57,7 @@ const useTicTac = () => {
   return {
     start,
     takeTurn,
+    bestMove,
     setCurrentPlayer,
     leave,
     playAgain,

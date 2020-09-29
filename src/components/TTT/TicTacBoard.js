@@ -19,7 +19,6 @@ const confettiConfig = {
 };
 
 const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
-  console.log(game.lastResults);
   const [shouldRenderConfetti, setShouldRenderConfetti] = useState(false);
 
   useEffect(() => {
@@ -115,20 +114,23 @@ const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
     }
   };
 
+  const onBestMoveClick = () => {
+    console.log(game.bestMove(game.currentPlayer));
+  };
+
   const renderScore = () => {
-    console.log(game.lastResults);
-    return game.lastResults?.map(result => {
+    return game.lastResults?.map((result, index) => {
       if (result === "tie") {
-        return <img className="ttt-tie-icon ttt-score-icon" alt="small tie" src="/images/tie.svg" />;
+        return <img key={index} className="ttt-tie-icon ttt-score-icon" alt="small tie" src="/images/tie.svg" />;
       }
       if (result.value === "x") {
         return (
-            <img className="ttt-score-icon ttt-score-cross" alt="small red cross" src="/images/ttt-cross.svg" />
+            <img key={index} className="ttt-score-icon ttt-score-cross" alt="small red cross" src="/images/ttt-cross.svg" />
 
         );
       }
       return (
-          <img className="ttt-score-icon ttt-score-circle" alt="small yellow circle" src="/images/ttt-circle.svg" />
+          <img key={index} className="ttt-score-icon ttt-score-circle" alt="small yellow circle" src="/images/ttt-circle.svg" />
       );
     });
   };
@@ -157,6 +159,8 @@ const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
       <div className="score-container">
         {renderScore()}
       </div>
+
+      <div onClick={onBestMoveClick}>Console log best move</div>
     </div>
   );
 };
