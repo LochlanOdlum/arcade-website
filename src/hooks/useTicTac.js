@@ -9,8 +9,8 @@ export const displayGame = {
   ],
   ties: 0,
   players: [
-    { id: "1", name: "Player 1", value: "x", score: 0 },
-    { id: "0", name: "Player 2", value: "o", score: 0 }
+    { id: "1", name: "Player 1", value: "x", score: 0, playerType: 'user' },
+    { id: "0", name: "Player 2", value: "o", score: 0, playerType: 'user'}
   ],
   get currentPlayer() {
     return this.players[0];

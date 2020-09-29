@@ -114,10 +114,6 @@ const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
     }
   };
 
-  const onBestMoveClick = () => {
-    console.log(game.bestMove(game.currentPlayer));
-  };
-
   const renderScore = () => {
     return game.lastResults?.map((result, index) => {
       if (result === "tie") {
@@ -143,6 +139,7 @@ const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
           name={game.players[0].name}
           id={game.players[0].id}
           value={game.players[0].value}
+          playerType={game.players[0].playerType}
           side="left"
         />
         <div className="break" />
@@ -152,6 +149,7 @@ const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
           name={game.players[1].name}
           id={game.players[1].id}
           value={game.players[1].value}
+          playerType={game.players[1].playerType}
           side="right"
         />
       </div>
@@ -159,8 +157,6 @@ const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
       <div className="score-container">
         {renderScore()}
       </div>
-
-      <div onClick={onBestMoveClick}>Console log best move</div>
     </div>
   );
 };

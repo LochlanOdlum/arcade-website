@@ -79,6 +79,14 @@
   background: rgb(176, 47, 141);
 }
 
+#ttt-play-offlineBot {
+  background: rgb(155, 11, 115);
+}
+
+#ttt-play-offlineBot:hover {
+  background: rgb(108, 7, 80);
+}
+
 .ttt-play:hover {
   background: rgb(196, 75, 64);
 }

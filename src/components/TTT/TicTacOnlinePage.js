@@ -9,8 +9,8 @@ import { GameStatus } from "../../gameLogic/game";
 const randomID = () => {
   return Math.floor(Math.random() * 100000000000000);
 };
-let playerSelf = { name: "", id: randomID(), value: "", score: 0 };
-let playerOther = { name: "", id: "", value: "", score: 0 };
+let playerSelf = { name: "", id: randomID(), value: "", score: 0, playerType: 'user' };
+let playerOther = { name: "", id: "", value: "", score: 0, playerType: 'user'};
 let socket = "";
 
 const TicTacOnlinePage = ({ name }) => {

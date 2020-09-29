@@ -28,8 +28,11 @@ const TicTacSelectMode = props => {
     }
   };
 
-  const onOfflineClick = () => {
-    props.setGameType("offline");
+  const onOfflineFriendClick = () => {
+    props.setGameType("offlineFriend");
+  };
+  const onOfflineBotClick = () => {
+    props.setGameType("offlineBot");
   };
 
   const renderError = () => {
@@ -69,11 +72,22 @@ const TicTacSelectMode = props => {
               <div
                 className="ttt-play"
                 id="ttt-play-offline"
-                onClick={onOfflineClick}
+                onClick={onOfflineFriendClick}
               >
-                Play Offline!
+                Offline vs Friend!
               </div>
             </div>
+
+            <div className="ttt-offline-container">
+              <div
+                className="ttt-play"
+                id="ttt-play-offlineBot"
+                onClick={onOfflineBotClick}
+              >
+                Offline vs Bot!
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

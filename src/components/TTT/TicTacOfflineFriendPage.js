@@ -4,7 +4,7 @@ import TicTacBoard from "./TicTacBoard";
 import useTicTac, { displayGame } from "../../hooks/useTicTac";
 import { GameStatus } from "../../gameLogic/game";
 
-const TicTacOfflinePage = () => {
+const TicTacOfflineFriendPage = () => {
   const game = useTicTac();
 
   const startGame = () => {
@@ -35,9 +35,9 @@ const TicTacOfflinePage = () => {
   return (
     <>
       <SmallHeader />
-      <TicTacBoard game={renderGame()} onSquareClick={onSquareClick} myPlayer={game.currentPlayer}/>
+      <TicTacBoard game={renderGame()} onSquareClick={onSquareClick} myPlayer={game.currentPlayer} />
     </>
   );
 };
 
-export default TicTacOfflinePage;
+export default TicTacOfflineFriendPage;

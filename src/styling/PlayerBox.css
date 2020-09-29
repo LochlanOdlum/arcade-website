@@ -37,6 +37,26 @@
     width: 50px;
 }
 
+.bot-icon-circle{
+    display: inline-flex;
+    margin-top: 4px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid white;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: rgb(199, 188, 229);
+}
+
+.bot-icon-circle img {
+    width: 50px;
+}
+.ttt-bot-icon-svg {
+    padding-bottom: 5px;
+}
+
 .user-icon {
     margin-top: 19px;
     color: rgb(106, 72, 176);

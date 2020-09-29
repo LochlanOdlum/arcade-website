@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import SmallHeader from "../SmallHeader";
 import TicTacSelectMode from "./TicTacSelectMode";
 import "../../styling/TTT/TicTacPage.css";
-import TicTacOfflinePage from "./TicTacOfflinePage";
+import TicTacOfflineFriendPage from "./TicTacOfflineFriendPage";
 import TicTacOnlinePage from "./TicTacOnlinePage";
+import TicTacOfflineBotPage from "./TicTacOfflineBotPage";
 
 const TicTacPage = () => {
   const [onlineNick, setOnlineNick] = useState("");
@@ -25,11 +26,20 @@ const TicTacPage = () => {
     );
   }
 
-  if (gameType === "offline") {
+  if (gameType === "offlineFriend") {
     return (
       <>
         <div className="ttt-page">
-          <TicTacOfflinePage />
+          <TicTacOfflineFriendPage />
+        </div>
+      </>
+    );
+  }
+  if (gameType === "offlineBot") {
+    return (
+      <>
+        <div className="ttt-page">
+          <TicTacOfflineBotPage />
         </div>
       </>
     );
