@@ -23,6 +23,7 @@
 
 .C4-nick-input {
     width: 50%;
+    min-width: 250px;
     font-size: 16px;
     padding-left: 10px;
     border-radius: 4px;
@@ -32,6 +33,7 @@
 
 .C4-play {
     width: 50%;
+    min-width: 250px;
     border-radius: 4px;
     height: 35px;
     line-height: 35px;

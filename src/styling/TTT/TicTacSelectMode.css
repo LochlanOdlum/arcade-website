@@ -1,5 +1,5 @@
 .ttt-pop-up {
-  margin: 20vh auto 0 auto;
+  margin: 17vh auto 0 auto;
   border-radius: 10px;
   width: 40%;
   max-width: 500px;
@@ -102,5 +102,11 @@
   .ttt-pop-up {
     width: 55%;
     height: 40%;
+  }
+}
+
+@media (max-height: 800px) {
+  .ttt-pop-up {
+    margin: 11vh auto 0 auto;
   }
 }
