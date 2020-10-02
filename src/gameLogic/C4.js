@@ -100,7 +100,7 @@ export default class C4Game extends Game {
     }
 
     let bestMove = [null, null];
-    const playerOther = this.players.find((p) => p.id !== playerSelf.id);
+    // const playerOther = this.players.find((p) => p.id !== playerSelf.id);
     let bestScore = -Infinity;
 
     let boardClone = new Array(7).fill([]).map(() => [null, null, null, null, null, null]);
@@ -114,13 +114,13 @@ export default class C4Game extends Game {
     //Once done it will set best move to the move with the highest game value, if a tie then will chose first square
     //that it loops through of the ties.
     for (let x = 0; x<boardClone.length; x++) {
-      let lowestY = null;
-      for (let y = 0; y < this.board[x].length-1; y++) {
-        if (this.board[x][y + 1] !== null) {
-          lowestY = y;
-          break;
-        }
-      }
+      // let lowestY = null;
+      // for (let y = 0; y < this.board[x].length-1; y++) {
+      //   if (this.board[x][y + 1] !== null) {
+      //     lowestY = y;
+      //     break;
+      //   }
+      // }
 
       for (let y=0; y<boardClone[x].length; y++) {
         //If top square is empty (so its a possible column to make move)
