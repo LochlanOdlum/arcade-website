@@ -105,8 +105,13 @@
   }
 }
 
-@media (max-height: 800px) {
+@media (max-height: 701px) {
   .ttt-pop-up {
     margin: 11vh auto 0 auto;
+  }
+}
+@media (max-width:1025px) {
+  .ttt-pop-up {
+    margin: 14vh auto 0 auto;
   }
 }

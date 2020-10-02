@@ -3,7 +3,8 @@ import "../../styling/C4/C4Board.css";
 import C4PlayerBox from "./C4PlayerBox";
 import { GameStatus } from "../../gameLogic/game";
 
-const C4Board = ({ game, onColumnClick, myColour}) => {
+const C4Board = ({ game, onColumnClick, myPlayer}) => {
+  console.log(game.winningTiles);
   const renderTileValue = ([x, y]) => {
     const playerIDAtTile = game.board[x][y];
     const playerAtTile = game.players.find(p => p.id === playerIDAtTile);
@@ -14,7 +15,7 @@ const C4Board = ({ game, onColumnClick, myColour}) => {
 
     if (
       game.status === GameStatus.inGame &&
-      myColour === game.currentPlayer?.value &&
+      myPlayer.value === game.currentPlayer?.value &&
       (y >= game.board[x].length - 1 || game.board[x][y + 1])
     ) {
       return game.currentPlayer.value === "red"
@@ -22,6 +23,20 @@ const C4Board = ({ game, onColumnClick, myColour}) => {
         : "c4-next-active-tile-yellow";
     }
 
+    return "";
+  };
+
+  const squareWinClass = (x, y) => {
+    if (game.status === GameStatus.won) {
+      for (const [winX, winY] of game.winningTiles) {
+        if (x === winX && y === winY) {
+          if (game.winner?.value === myPlayer.value) {
+            return "c4-tile-won";
+          }
+          return "c4-tile-loss";
+        }
+      }
+    }
     return "";
   };
 
@@ -37,7 +52,7 @@ const C4Board = ({ game, onColumnClick, myColour}) => {
         {column.map((id, y) => {
           return (
             <div
-              className={`c4-tile x:${x} y:${y} ${renderTileValue([x, y])}`}
+              className={`c4-tile x:${x} y:${y} ${renderTileValue([x, y])} ${squareWinClass(x,y)}`}
               key={`x:${x} y:${y}`}
               id={id}
             />
@@ -48,18 +63,18 @@ const C4Board = ({ game, onColumnClick, myColour}) => {
   };
 
   const renderScore = () => {
-    console.log(game);
-    return game.lastResults?.map(result => {
+    console.log(game.winningTiles);
+    return game.lastResults?.map((result, index) => {
       if (result === "tie") {
-        return <img className="c4-tie-icon c4-score-icon" alt="small tie" src="/images/tie.svg" />;
+        return <img key={index} className="c4-tie-icon c4-score-icon" alt="small tie" src="/images/tie.svg" />;
       }
       if (result.value === "red") {
         return (
-           <div className="c4-score-icon c4-score-icon-red"/>
+           <div key={index} className="c4-score-icon c4-score-icon-red"/>
         );
       }
       return (
-          <div className="c4-score-icon c4-score-icon-yellow"/>
+          <div key={index} className="c4-score-icon c4-score-icon-yellow"/>
       );
     });
   };

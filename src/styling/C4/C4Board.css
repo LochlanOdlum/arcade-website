@@ -35,12 +35,19 @@
     width: 100%;
     padding-top: 100%;
     border-radius: 50%;
+    border: 3px solid rgb(102, 72, 196);
     box-shadow: 0 2px 1px rgb(37, 19, 91) inset;
     background: rgb(51, 34, 103);
     content: '';
     display: block;
     position: relative;
     /*transition: all 0.1s;*/
+}
+.c4-tile.c4-tile-won::before {
+    border: 3px solid #27d075;
+}
+.c4-tile.c4-tile-loss::before {
+    border: 3px solid rgb(233, 40, 40);
 }
 
 .c4-tile-red::before {
@@ -65,7 +72,7 @@
 
 .c4-score-container {
     display: flex;
-    margin-top: 10px;
+    padding: 10px 0 10px 0;
     justify-content: center;
 }
 
@@ -121,10 +128,14 @@
         margin-top: 30px;
         margin-bottom: 20px;
         width: 90vw;
+        padding: 10px;
     }
     .break {
         order: 3;
         width: 100%;
+    }
+    .c4-column {
+        padding-bottom: 10px;
     }
     .c4-board-block {
         padding-top: 0;

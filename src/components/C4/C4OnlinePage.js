@@ -88,7 +88,7 @@ const C4OnlinePage = ({name}) => {
     <div>
       {renderLoading()}
       <SmallHeader/>
-      <C4Board game={getGame()} onColumnClick={onColumnClick} myColour={playerSelf.value} />
+      <C4Board game={getGame()} onColumnClick={onColumnClick} myPlayer={playerSelf} />
     </div>
   )
 };

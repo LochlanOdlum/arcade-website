@@ -21,3 +21,10 @@
     box-shadow: -1px 4px 8px #625217 inset, -24px -25px 20px #dbb318 inset;
     border: 1px solid #fff;
 }
+
+@media(max-width: 860px) {
+    .c4-mini-piece {
+        width: 46px;
+        height: 46px;
+    }
+}

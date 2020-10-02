@@ -29,11 +29,11 @@ const C4OfflinePage = () => {
     if (game.status === GameStatus.draw || game.status === GameStatus.won) {
       game.playAgain();
     } else {
-      try {
+      // try {
         game.takeTurn(game.currentPlayer, x);
-      } catch (error) {
-        console.error(error);
-      }
+      // } catch (error) {
+      //   console.error(error);
+      // }
     }
   };
 
@@ -41,7 +41,7 @@ const C4OfflinePage = () => {
   return (
     <>
       <SmallHeader/>
-      <C4Board game={getGame()} onColumnClick={onColumnClick} myColour={game.currentPlayer?.value}/>
+      <C4Board game={getGame()} onColumnClick={onColumnClick} myPlayer={game.currentPlayer}/>
     </>
   );
 };

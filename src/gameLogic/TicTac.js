@@ -143,7 +143,6 @@ export default class TicTacGame extends Game {
         }
       }
     }
-    console.log(bestScore);
     return bestMove;
   };
 
