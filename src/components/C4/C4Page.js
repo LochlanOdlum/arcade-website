@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import C4SelectMode from "./C4SelectMode";
 import C4OfflinePage from "./C4OfflinePage";
+import C4OfflineBotPage from "./C4OfflineBotPage";
 import C4OnlinePage from "./C4OnlinePage";
 import '../../styling/C4/C4Page.css';
 
@@ -18,6 +19,12 @@ const C4Page = () => {
     return (
       <div className="C4-page">
         <C4OnlinePage name={onlineNick} />
+      </div>
+    );
+  } else if (gameType === 'offlineBot') {
+    return (
+      <div className="C4-page">
+        <C4OfflineBotPage name={onlineNick} />
       </div>
     );
   }

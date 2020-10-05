@@ -3,6 +3,7 @@ import GameSelection from "./GameSelection";
 import "../styling/App.css";
 import TicTacPage from "./TTT/TicTacPage";
 import C4Page from './C4/C4Page';
+import SnakePage from "./Snake/SnakePage";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -32,6 +33,11 @@ const App = () => {
         <Route path="/connect4">
           <C4Page/>
         </Route>
+
+        <Route path="/snake">
+          <SnakePage/>
+        </Route>
+
       </Switch>
     </Router>
   );

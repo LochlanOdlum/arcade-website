@@ -30,6 +30,10 @@ const useC4 = () => {
     forceUpdate();
   };
 
+  const bestMove = player => {
+    return game.bestMove(player);
+  };
+
   const leave = player => {
     game.leave(player);
     forceUpdate();
@@ -43,6 +47,7 @@ const useC4 = () => {
   return {
     start,
     takeTurn,
+    bestMove,
     playAgain,
     leave,
 

@@ -1,164 +1,178 @@
 .c4-board-block {
-    display: flex;
-    padding-top: 6vh;
-    justify-content: center;
+  display: flex;
+  padding-top: 6vh;
+  justify-content: center;
 }
 .c4-board-container {
-    margin: auto;
-    border-radius: 10px;
+  margin: auto;
+  border-radius: 10px;
 }
 
 .c4-board {
-    /*background: rgb(64, 148, 245);*/
-    background: rgb(102, 72, 196);
-    display: inline-flex;
-    border-radius: 10px;
-    width: 55vw;
-    max-width: 700px;
-    padding: 20px;
-    order: 2;
-
+  /*background: rgb(64, 148, 245);*/
+  background: rgb(102, 72, 196);
+  display: inline-flex;
+  border-radius: 10px;
+  width: 55vw;
+  max-width: 700px;
+  padding: 20px;
+  order: 2;
 }
 .c4-column {
-    padding-bottom: 20px;
-    flex-grow: 1;
-    height: 100%;
-    display: inline-flex;
-    flex-direction: column;
+  padding-bottom: 20px;
+  flex-grow: 1;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
 }
 .c4-tile {
-    margin: 8px;
-    flex-grow: 1;
+  margin: 2px;
+  flex-grow: 1;
 }
 
-.c4-tile::before {
-    width: 100%;
-    padding-top: 100%;
-    border-radius: 50%;
-    border: 3px solid rgb(102, 72, 196);
-    box-shadow: 0 2px 1px rgb(37, 19, 91) inset;
-    background: rgb(51, 34, 103);
-    content: '';
-    display: block;
-    position: relative;
-    /*transition: all 0.1s;*/
+.c4-tile-inner {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 50%;
+  box-sizing: content-box;
+  /*border-radius: 50%;*/
+  background: transparent;
+  display: block;
+  position: relative;
+  /*transition: all 0.1s;*/
 }
-.c4-tile.c4-tile-won::before {
-    border: 3px solid #27d075;
+.c4-tile-inner::before {
+  top: 3px;
+  left: 3px;
+  bottom: 3px;
+  right: 3px;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px rgb(37, 19, 91) inset;
+  background: rgb(51, 34, 103);
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: content-box;
+  /*transition: all 0.1s;*/
 }
-.c4-tile.c4-tile-loss::before {
-    border: 3px solid rgb(233, 40, 40);
+.c4-tile.c4-tile-won .c4-tile-inner::before {
+  border: 3px solid #27d075;
+}
+.c4-tile.c4-tile-loss .c4-tile-inner::before {
+  border: 3px solid rgb(233, 40, 40);
 }
 
-.c4-tile-red::before {
-    background: #F84E6A;
-    box-shadow: -1px 4px 8px rgba(45, 0, 0, 0.69) inset, -24px -25px 20px #d02647 inset;
+.c4-tile-red .c4-tile-inner::before {
+  background: #f84e6a;
+  box-shadow: -1px 4px 8px rgba(45, 0, 0, 0.69) inset,
+    -24px -25px 20px #d02647 inset;
 }
-.c4-tile-yellow::before {
-    background: rgb(248, 205, 123);
-    box-shadow: -1px 4px 8px #625217 inset, -24px -25px 20px #dbb318 inset;
+.c4-tile-yellow .c4-tile-inner::before {
+  background: rgb(248, 205, 123);
+  box-shadow: -1px 4px 8px #625217 inset, -24px -25px 20px #dbb318 inset;
 }
 
-.c4-column:hover .c4-next-active-tile-red::before {
-    background: #F84E6A;
-    box-shadow: -1px 4px 8px rgba(45, 0, 0, 0.69) inset, -24px -25px 20px #d02647 inset;
-    opacity: 0.6;
+.c4-column:hover .c4-next-active-tile-red .c4-tile-inner::before {
+  background: #f84e6a;
+  box-shadow: -1px 4px 8px rgba(45, 0, 0, 0.69) inset,
+    -24px -25px 20px #d02647 inset;
+  opacity: 0.6;
 }
-.c4-column:hover .c4-next-active-tile-yellow::before {
-    background: rgb(248, 205, 123);
-    opacity: 0.6;
-    box-shadow: -1px 4px 8px #625217 inset, -24px -25px 20px #dbb318 inset;
+.c4-column:hover .c4-next-active-tile-yellow .c4-tile-inner::before {
+  background: rgb(248, 205, 123);
+  opacity: 0.6;
+  box-shadow: -1px 4px 8px #625217 inset, -24px -25px 20px #dbb318 inset;
 }
 
 .c4-score-container {
-    display: flex;
-    padding: 10px 0 10px 0;
-    justify-content: center;
+  display: flex;
+  padding: 10px 0 10px 0;
+  justify-content: center;
 }
 
 .c4-score-icon {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    margin: 0 5px 0 5px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin: 0 5px 0 5px;
 }
 .c4-score-icon-red {
-    border: 1px solid white;
-    background: #F84E6A;
-    box-shadow: -1px 4px 8px rgba(45, 0, 0, 0.69) inset, -24px -25px 20px #d02647 inset;
+  border: 1px solid white;
+  background: #f84e6a;
+  box-shadow: -1px 4px 8px rgba(45, 0, 0, 0.69) inset,
+    -24px -25px 20px #d02647 inset;
 }
 
 .c4-score-icon-yellow {
-    border: 1px solid white;
-    background: rgb(248, 205, 123);
-    box-shadow: -1px 4px 8px #625217 inset, -24px -25px 20px #dbb318 inset;
+  border: 1px solid white;
+  background: rgb(248, 205, 123);
+  box-shadow: -1px 4px 8px #625217 inset, -24px -25px 20px #dbb318 inset;
 }
 
 .c4-score-tile::before {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
 @media (max-width: 1080px) {
-    .c4-tile {
-        margin: 5px;
-    }
+  .c4-tile {
+    margin: 1px;
+  }
 }
 
 @media (max-width: 1000px) {
-    .c4-score-icon {
-        width: 50px;
-        height: 50px;
-    }
+  .c4-score-icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 
-
 @media (max-width: 880px) {
-    .c4-tile {
-        margin: 4px;
-    }
-    .c4-score-icon {
-        width: 45px;
-        height: 45px;
-    }
+  .c4-tile {
+    margin: 1px;
+  }
+  .c4-score-icon {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 @media (max-width: 767px) {
-    .c4-board {
-        order: 4;
-        margin-top: 30px;
-        margin-bottom: 20px;
-        width: 90vw;
-        padding: 10px;
-    }
-    .break {
-        order: 3;
-        width: 100%;
-    }
-    .c4-column {
-        padding-bottom: 10px;
-    }
-    .c4-board-block {
-        padding-top: 0;
-        flex-wrap: wrap;
-        width: 100vw;
-        justify-content: center;
-    }
-    .c4-score-icon {
-        width: 70px;
-        height: 70px;
-    }
+  .c4-board {
+    order: 4;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 90vw;
+    padding: 10px;
+  }
+  .break {
+    order: 3;
+    width: 100%;
+  }
+  .c4-column {
+    padding-bottom: 10px;
+  }
+  .c4-board-block {
+    padding-top: 0;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+  }
+  .c4-score-icon {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 @media (max-width: 670px) {
-    .c4-score-icon {
-        width: 55px;
-        height: 55px;
-    }
+  .c4-score-icon {
+    width: 55px;
+    height: 55px;
+  }
 }
 
 @media (max-width: 480px) {
-    .c4-score-icon {
-        width: 40px;
-        height: 40px;
-    }
+  .c4-score-icon {
+    width: 40px;
+    height: 40px;
+  }
 }

@@ -84,8 +84,7 @@ export default class TicTacGame extends Game {
       }
 
       if (matchCount >= 3) {
-        let winningSquares = currentWinningSquares;
-        return [true, winningSquares];
+        return [true, currentWinningSquares];
       }
     }
     return [false, [[null,null], [null, null], [null, null]]];
@@ -143,6 +142,7 @@ export default class TicTacGame extends Game {
         }
       }
     }
+    console.log(bestScore);
     return bestMove;
   };
 
@@ -157,19 +157,11 @@ export default class TicTacGame extends Game {
 
             let score;
             if (this.checkForWinAtPoint(board, [x, y])[0]) {
-              score = 1;
+              score = 10-depth;
             } else if (this.checkForDraw(board)) {
               score = 0;
             } else {
               score = this.minimax(board, false, depth + 1, playerSelf, playerOther);
-              //If score is positive then player is winning, so want to shorten game so dividing by depth
-              //If score is negative then player is losing, so want to lengthen game (in hopes of opponent messing up)
-              //so multiplying by depth. So another move which loses too but is shorter wont be chosen.
-              if (score>0) {
-                score = score*depth;
-              } else {
-                score = score/depth;
-              }
             }
 
             if (score > bestScore) {
@@ -191,16 +183,11 @@ export default class TicTacGame extends Game {
             let score;
             if (this.checkForWinAtPoint(board, [x, y])[0]) {
               //If there is a win after playerOther takes turn then it must be a loss for playerSelf, so -1.
-              score = -1;
+              score = -10+depth;
             } else if (this.checkForDraw(board)) {
               score = 0;
             } else {
               score = this.minimax(board, true, depth + 1, playerSelf, playerOther);
-              if (score>0) {
-                score = score/depth;
-              } else {
-                score = score*depth;
-              }
             }
 
             if (score < bestScore) {

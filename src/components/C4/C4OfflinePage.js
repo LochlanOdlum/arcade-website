@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import C4Board from "./C4Board";
 import useC4, { displayGame } from "../../hooks/useC4";
 import SmallHeader from "../SmallHeader";
-import {GameStatus} from "../../gameLogic/game";
+import { GameStatus } from "../../gameLogic/game";
 
 const offlinePlayers = [
   { name: "Player 1", value: "red", id: 1, score: 0 },
@@ -29,19 +29,22 @@ const C4OfflinePage = () => {
     if (game.status === GameStatus.draw || game.status === GameStatus.won) {
       game.playAgain();
     } else {
-      // try {
+      try {
         game.takeTurn(game.currentPlayer, x);
-      // } catch (error) {
-      //   console.error(error);
-      // }
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
 
-
   return (
     <>
-      <SmallHeader/>
-      <C4Board game={getGame()} onColumnClick={onColumnClick} myPlayer={game.currentPlayer}/>
+      <SmallHeader />
+      <C4Board
+        game={getGame()}
+        onColumnClick={onColumnClick}
+        myPlayer={game.currentPlayer}
+      />
     </>
   );
 };

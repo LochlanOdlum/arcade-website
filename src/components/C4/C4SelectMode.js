@@ -15,6 +15,10 @@ const C4SelectMode = ({ setGameType, setOnlineNick }) => {
     setGameType("offline");
   };
 
+  // const onOfflineBotClick = () => {
+  //   setGameType('offlineBot')
+  // };
+
   const onOnlineClick = () => {
     if (!currentNick && !displayError) {
       setDisplayError(true);
@@ -61,8 +65,11 @@ const C4SelectMode = ({ setGameType, setOnlineNick }) => {
         </div>
         <div className="C4-or-text">or</div>
         <div className="C4-play C4-play-offline" onClick={onOfflineClick}>
-          Play offline!
+          Offline vs Friend!
         </div>
+        {/*<div className="C4-play C4-play-offline" onClick={onOfflineBotClick}>*/}
+        {/*  Offline vs Bot!*/}
+        {/*</div>*/}
       </div>
     </>
   );

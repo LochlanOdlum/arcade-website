@@ -43,10 +43,8 @@ const TicTacBoard = ({ game, onSquareClick, myPlayer }) => {
       }
     };
 
-    if (shouldRenderConfetti && isSquareWinning()) {
-      return true;
-    }
-    return false;
+    return shouldRenderConfetti && isSquareWinning();
+
   };
 
   const renderBoard = () => {

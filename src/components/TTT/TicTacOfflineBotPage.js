@@ -37,7 +37,6 @@ const TicTacOfflineBotPage = () => {
   };
 
   const onSquareClick = (x, y) => {
-    console.log(game.currentPlayer);
     if (game.status === GameStatus.draw || game.status === GameStatus.won) {
       game.playAgain();
       //Game doesn't immediately update current player, so bot will take first turn when the game has current player as the actual player.

@@ -2,6 +2,7 @@ import React from "react";
 import TicTacButton from "./TTT/TicTacButton";
 import C4Button from "./C4/C4Button";
 import "../styling/GameSelection.css";
+import SnakeButton from "./Snake/SnakeButton";
 
 const GameSelection = () => {
   return (
@@ -9,7 +10,7 @@ const GameSelection = () => {
       <div className="game-grid-container">
         <TicTacButton />
         <C4Button/>
-        <TicTacButton />
+        <SnakeButton />
         <C4Button/>
         <TicTacButton />
       </div>
