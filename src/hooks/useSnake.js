@@ -47,7 +47,8 @@ const useSnake = (boardWidth, boardHeight, cooldown) => {
     turn,
 
     position: game.position,
-    board: game.board
+    board: game.board,
+    score: game.score
   };
 };
 

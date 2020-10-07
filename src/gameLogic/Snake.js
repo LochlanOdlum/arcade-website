@@ -23,6 +23,7 @@ class SnakeGame {
 
   constructor(boardWidth, boardHeight, cooldown) {
     this.moveCoolDown = cooldown;
+    this.score = 0;
     //Board width and height must be odd so snake can start in middle.
     this.boardWidth = boardWidth;
     this.boardHeight = boardHeight;
@@ -63,10 +64,14 @@ class SnakeGame {
 
     if (newHead[0] === this.food[0] && newHead[1] === this.food[1]) {
       this.eatFood();
+      this.board[newHead[0]][newHead[1]] = 'null';
     }
 
-    for (let [x, y] of this.position) {
-      if (x === newHead[0] && y === newHead[1]) {
+    for (let index in this.position) {
+      const x = this.position[index][0];
+      const y = this.position[index][1];
+      if ( x === newHead[0] && y === newHead[1] && (index !== '0')) {
+        console.log(index);
         console.log("snake hit itself");
         // this.board[this.position[this.position.length - 1][0]][
         //   this.position[this.position.length - 1][1]
@@ -88,12 +93,12 @@ class SnakeGame {
       return;
     }
     //Shifts snake along in board
-    this.board[newHead[0]][newHead[1]] = "snake";
     this.board[this.position[0][0]][this.position[0][1]] = null;
+    this.board[newHead[0]][newHead[1]] = "snake";
 
     //Shifts snake in position
-    this.position.push(newHead);
     this.position.splice(0, 1);
+    this.position.push(newHead);
   };
 
   moveLoop = () => {
@@ -132,6 +137,7 @@ class SnakeGame {
 
     this.position.unshift([[newTailX], [newTailY]]);
     this.createFood();
+    this.score +=5;
   };
 
   start = () => {

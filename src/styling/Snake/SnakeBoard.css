@@ -1,26 +1,53 @@
+.s-board {
+    width: 60vw;
+    display: inline-flex;
+    max-width: 900px;
+    border: 3px solid rgb(133, 139, 116);
+}
+
+.s-score {
+    display: block;
+    width: 60vw;
+    max-width: 900px;
+    padding-left: 20px;
+    font-size: 23px;
+    color: white;
+}
+
 .s-cell {
-    width: 30px;
-    height: 30px;
-    background: black;
+    padding-top: 100%;
+    /*height: 30px;*/
+    background: rgb(158, 191, 62);
 }
 
 .s-column {
     display: inline-block;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.s-cell.s-cell-snake {
+    padding-top: 0;
+}
+.s-cherry {
+    width: 100%;
+    background: rgb(158, 191, 62);
+    display: block;
+    /*padding-top: 100%;*/
 }
 
 .s-cell-snake::before {
     box-sizing: border-box;
-    background: green;
+    background: rgb(44, 51, 23);
     border-radius: 20%;
-    border-color: black;
+    padding-top: 100%;
     width: 100%;
-    height: 100%;
     display: block;
     content: ""
 }
 
 .s-cell-food {
-    background: red;
+    /*background: red;*/
 }
 
 .s-cell-empty {

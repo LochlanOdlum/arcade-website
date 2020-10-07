@@ -10,7 +10,7 @@ const SnakeButton = () => {
           <div className="icon">
             <img
               className="icon"
-              src="/images/ttt-board-invert.png"
+              src="/images/snake.png"
               alt="snake game"
             />
           </div>
