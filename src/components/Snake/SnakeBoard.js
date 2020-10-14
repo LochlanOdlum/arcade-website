@@ -1,24 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import useSnake from "../../hooks/useSnake";
+import useSnakeSwipeArrowTurn from '../../hooks/useSnakeSwipeArrowTurn'
 import "../../styling/Snake/SnakeBoard.css";
-
+import {SnakeGameStatus} from "../../gameLogic/Snake";
 
 const SnakeBoard = () => {
-  let game = useSnake(15, 11, 100);
+  let game = useSnake(21, 15, 140);
+  useSnakeSwipeArrowTurn(game);
 
+  const isPreGame = game.status === SnakeGameStatus.preGame;
 
   const startGame = () => {
-    document.addEventListener("keydown", event => {
-      if (event.keyCode === 38) {
-        game.turn(0, -1);
-      } else if (event.keyCode === 40) {
-        game.turn(0, 1);
-      } else if (event.keyCode === 37) {
-        game.turn(-1, 0);
-      } else if (event.keyCode === 39) {
-        game.turn(1, 0);
-      }
-    });
     try {
       game.start();
     } catch (error) {
@@ -26,23 +18,28 @@ const SnakeBoard = () => {
     }
   };
 
-  useEffect(startGame, []);
+
 
   const renderBoard = () => {
     return game.board.map((columnx, indexX) => (
       <div key={`${indexX}`} className="s-column">
         {columnx.map((celly, indexY) => {
-          if (celly === "snake") {
+          if (celly === "snake" && !isPreGame) {
             return (
               <div
                 key={`${indexX} ${indexY}`}
-                className="s-cell-snake s-cell"
+                className={`s-cell-snake s-cell`}
               />
             );
           }
-          if (celly === "food") {
+          if (celly === "food" && !isPreGame) {
             return (
-                <img key={`${indexX} ${indexY}`} className="s-cherry" alt="cherry" src="/images/snake-cherry.svg" />
+              <img
+                key={game.food[1]}
+                className={`s-cherry`}
+                alt="cherry"
+                src="/images/snake-cherry.svg"
+              />
             );
           }
 
@@ -54,10 +51,28 @@ const SnakeBoard = () => {
     ));
   };
 
+  const renderMenu = () => {
+    console.log(game);
+    if (game.status === SnakeGameStatus.preGame) {
+      return (
+        <div onClick={startGame} className="s-button-start">
+          Start!
+        </div>
+      );
+    }
+  };
+
+
   return (
     <>
-        <div className="s-board"> {renderBoard()} </div>
-        <div className="s-score"> {`Score: ${game.score}`} </div>
+      <div className="s-board-box">
+        <div className="s-menu-container">
+          {renderMenu()}
+        </div>
+
+        <div className="s-board">{renderBoard()}</div>
+      </div>
+      <div className="s-score"> {`Score: ${game.score}`} </div>
     </>
   );
 };

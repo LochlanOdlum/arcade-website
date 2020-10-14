@@ -13,7 +13,6 @@ const GameSelection = () => {
         <C4Button/>
         <SnakeButton />
         <ChessButton/>
-        <TicTacButton />
       </div>
     </div>
   );

@@ -40,6 +40,19 @@ body {
   height: 220px;
 }
 
+.main-footer {
+  position: absolute;
+  bottom: 0;
+  height: 130px;
+  background: #333;
+  min-width: 100vw;
+  color: #ccc;
+}
+.main-footer-text {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
 .main {
   /*height: 80vh;*/
   text-align: center;

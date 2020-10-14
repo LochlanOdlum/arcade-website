@@ -18,13 +18,12 @@ const useSnake = (boardWidth, boardHeight, cooldown) => {
 
   //Function is called here instead of in shiftSnake so board will be updated after snake is shifted.
   const moveLoop = () => {
-    game.shiftSnake();
     if (game.status !== SnakeGameStatus.inGame) {
-      game.status = SnakeGameStatus.inGame;
-
-      forceUpdate();
       return;
     }
+    game.shiftSnake();
+
+    forceUpdate();
     setTimeout(() => {
       moveLoop();
     }, game.moveCoolDown);
@@ -47,8 +46,10 @@ const useSnake = (boardWidth, boardHeight, cooldown) => {
     turn,
 
     position: game.position,
+    status: game.status,
     board: game.board,
-    score: game.score
+    score: game.score,
+    food: game.food
   };
 };
 
