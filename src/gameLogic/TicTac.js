@@ -119,10 +119,8 @@ export default class TicTacGame extends Game {
     }
 
     let bestMove = [null, null];
-    const emptyTiles = [];
     const playerOther = this.players.find(p => p.id !== playerSelf.id);
     let bestScore = -Infinity;
-    let isDepth0 = true;
 
     let boardClone = [
       [null, null, null],
@@ -134,7 +132,6 @@ export default class TicTacGame extends Game {
       for (let y = 0; y < this.board[x].length; y++) {
         boardClone[x][y] = this.board[x][y];
         if (this.board[x][y] === null) {
-          emptyTiles.push([x, y]);
         }
       }
     }
@@ -149,22 +146,17 @@ export default class TicTacGame extends Game {
           boardClone[x][y] = playerSelf.id;
 
           let score;
-          let isCurrentDepth0;
           if (this.checkForWinAtPoint(boardClone, [x, y])[0]) {
             score = 10;
-            isCurrentDepth0 = true;
           } else if (this.checkForDraw(boardClone)) {
             score = 0;
-            isCurrentDepth0 = true;
           } else {
             score = this.minimax(boardClone, false, 2, playerSelf, playerOther);
-            isCurrentDepth0 = false;
           }
 
           if (score > bestScore) {
             bestScore = score;
             bestMove = [x, y];
-            isDepth0 = isCurrentDepth0;
           }
           //Sets boardClone square to null after checking value of game by playing at that square, cleaning up.
           boardClone[x][y] = null;
@@ -173,17 +165,13 @@ export default class TicTacGame extends Game {
     }
     console.log(bestScore);
 
-    if (!isDepth0) {
-      const randomNum = Math.random();
-      if (randomNum < 0.33) {
-        return emptyTiles[Math.floor(Math.random() * emptyTiles.length)];
-      }
-      return bestMove;
-    }
     return bestMove;
   };
 
   minimax = (board, isMaximising, depth, playerSelf, playerOther) => {
+    if (depth > 2) {
+      return 0;
+    }
     //isMaximising means it's playerSelf's turn to move, trying to get largest value of game (as value = gain)
     if (isMaximising) {
       let bestScore = -Infinity;
