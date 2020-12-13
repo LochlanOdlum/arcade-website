@@ -1,4 +1,4 @@
-import Game,{ GameStatus } from "./game";
+import Game, { GameStatus } from "./game";
 
 export default class TicTacGame extends Game {
   board = [
@@ -7,7 +7,11 @@ export default class TicTacGame extends Game {
     [null, null, null]
   ];
   ties = 0;
-  winningSquares = [[null, null], [null, null], [null, null]];
+  winningSquares = [
+    [null, null],
+    [null, null],
+    [null, null]
+  ];
   lastResults = [];
   lastResultsAmount = 7;
 
@@ -18,9 +22,7 @@ export default class TicTacGame extends Game {
 
     super(players);
 
-    const startingPlayer = this.players.find(
-      p => p.value === "x"
-    );
+    const startingPlayer = this.players.find(p => p.value === "x");
     this.setCurrentPlayer(startingPlayer);
   }
 
@@ -28,10 +30,10 @@ export default class TicTacGame extends Game {
     this.status = GameStatus.inGame;
   };
 
-   checkForDraw = (board) => {
-     if (this.status === GameStatus.won) {
-       return false;
-     }
+  checkForDraw = board => {
+    if (this.status === GameStatus.won) {
+      return false;
+    }
     let nullCount = 0;
 
     for (const column of board) {
@@ -42,7 +44,6 @@ export default class TicTacGame extends Game {
       }
     }
     return nullCount === 0;
-
   };
 
   checkForWinAtPoint = (board, [x, y]) => {
@@ -52,17 +53,27 @@ export default class TicTacGame extends Game {
       [0, -1],
       [-1, 1]
     ];
-    let currentWinningSquares = [[x, y], [null, null], [null, null]];
+    let currentWinningSquares = [
+      [x, y],
+      [null, null],
+      [null, null]
+    ];
 
     const playerIDAtPoint = board[x][y];
 
     if (!playerIDAtPoint) {
-      return [false, [[null,null], [null, null], [null, null]]];
+      return [
+        false,
+        [
+          [null, null],
+          [null, null],
+          [null, null]
+        ]
+      ];
     }
 
     for (const direction of searchDirections) {
       let matchCount = 1;
-
 
       for (const directionMagnitude of [1, -1]) {
         let currentX = x + direction[0] * directionMagnitude;
@@ -74,7 +85,7 @@ export default class TicTacGame extends Game {
           currentY >= 0 &&
           currentY < board[0].length &&
           board[currentX][currentY] === playerIDAtPoint
-          ) {
+        ) {
           currentWinningSquares[matchCount] = [currentX, currentY];
           matchCount += 1;
 
@@ -87,20 +98,31 @@ export default class TicTacGame extends Game {
         return [true, currentWinningSquares];
       }
     }
-    return [false, [[null,null], [null, null], [null, null]]];
+    return [
+      false,
+      [
+        [null, null],
+        [null, null],
+        [null, null]
+      ]
+    ];
   };
 
-  bestMove = (playerSelf) => {
+  bestMove = playerSelf => {
     if (this.status !== GameStatus.inGame) {
-      throw new Error("Can't find best move of game if it isn't in progress")
+      throw new Error("Can't find best move of game if it isn't in progress");
     }
     if (this.currentPlayer.id !== playerSelf.id) {
-      throw new Error("It isn't this players turn so cannot find their best move. Please wait your turn")
+      throw new Error(
+        "It isn't this players turn so cannot find their best move. Please wait your turn"
+      );
     }
 
     let bestMove = [null, null];
-    const playerOther = this.players.find((p) => p.id !== playerSelf.id);
+    const emptyTiles = [];
+    const playerOther = this.players.find(p => p.id !== playerSelf.id);
     let bestScore = -Infinity;
+    let isDepth0 = true;
 
     let boardClone = [
       [null, null, null],
@@ -108,34 +130,41 @@ export default class TicTacGame extends Game {
       [null, null, null]
     ];
     //Loop to clone board to boardClone
-    for (let x = 0; x<this.board.length; x++) {
-      for (let y=0; y<this.board[x].length; y++) {
+    for (let x = 0; x < this.board.length; x++) {
+      for (let y = 0; y < this.board[x].length; y++) {
         boardClone[x][y] = this.board[x][y];
+        if (this.board[x][y] === null) {
+          emptyTiles.push([x, y]);
+        }
       }
     }
 
     //This loops through all possible moves and gets value of game from those moves using minimax function
     //Once done it will set best move to the move with the highest game value, if a tie then will chose first square
     //that it loops through of the ties.
-    for (let x = 0; x<boardClone.length; x++) {
-      for (let y=0; y<boardClone[x].length; y++) {
+    for (let x = 0; x < boardClone.length; x++) {
+      for (let y = 0; y < boardClone[x].length; y++) {
         //If square is empty (so its a possible move)
         if (boardClone[x][y] === null) {
           boardClone[x][y] = playerSelf.id;
 
           let score;
-          if (this.checkForWinAtPoint(boardClone, [x,y])[0]) {
-            score = 1;
-          }
-          else if (this.checkForDraw(boardClone)) {
+          let isCurrentDepth0;
+          if (this.checkForWinAtPoint(boardClone, [x, y])[0]) {
+            score = 10;
+            isCurrentDepth0 = true;
+          } else if (this.checkForDraw(boardClone)) {
             score = 0;
+            isCurrentDepth0 = true;
           } else {
-          score = this.minimax(boardClone, false, 2, playerSelf, playerOther);
+            score = this.minimax(boardClone, false, 2, playerSelf, playerOther);
+            isCurrentDepth0 = false;
           }
 
-          if (score>bestScore) {
+          if (score > bestScore) {
             bestScore = score;
-            bestMove = [x,y];
+            bestMove = [x, y];
+            isDepth0 = isCurrentDepth0;
           }
           //Sets boardClone square to null after checking value of game by playing at that square, cleaning up.
           boardClone[x][y] = null;
@@ -143,25 +172,39 @@ export default class TicTacGame extends Game {
       }
     }
     console.log(bestScore);
+
+    if (!isDepth0) {
+      const randomNum = Math.random();
+      if (randomNum < 0.33) {
+        return emptyTiles[Math.floor(Math.random() * emptyTiles.length)];
+      }
+      return bestMove;
+    }
     return bestMove;
   };
 
   minimax = (board, isMaximising, depth, playerSelf, playerOther) => {
-   //isMaximising means it's playerSelf's turn to move, trying to get largest value of game (as value = gain)
+    //isMaximising means it's playerSelf's turn to move, trying to get largest value of game (as value = gain)
     if (isMaximising) {
       let bestScore = -Infinity;
-      for (let x = 0; x<board.length; x++) {
+      for (let x = 0; x < board.length; x++) {
         for (let y = 0; y < board[x].length; y++) {
           if (board[x][y] === null) {
             board[x][y] = playerSelf.id;
 
             let score;
             if (this.checkForWinAtPoint(board, [x, y])[0]) {
-              score = 10-depth;
+              score = 10 - depth;
             } else if (this.checkForDraw(board)) {
               score = 0;
             } else {
-              score = this.minimax(board, false, depth + 1, playerSelf, playerOther);
+              score = this.minimax(
+                board,
+                false,
+                depth + 1,
+                playerSelf,
+                playerOther
+              );
             }
 
             if (score > bestScore) {
@@ -175,7 +218,7 @@ export default class TicTacGame extends Game {
     }
     if (!isMaximising) {
       let bestScore = Infinity;
-      for (let x = 0; x<board.length; x++) {
+      for (let x = 0; x < board.length; x++) {
         for (let y = 0; y < board[x].length; y++) {
           if (board[x][y] === null) {
             board[x][y] = playerOther.id;
@@ -183,11 +226,17 @@ export default class TicTacGame extends Game {
             let score;
             if (this.checkForWinAtPoint(board, [x, y])[0]) {
               //If there is a win after playerOther takes turn then it must be a loss for playerSelf, so -1.
-              score = -10+depth;
+              score = -10 + depth;
             } else if (this.checkForDraw(board)) {
               score = 0;
             } else {
-              score = this.minimax(board, true, depth + 1, playerSelf, playerOther);
+              score = this.minimax(
+                board,
+                true,
+                depth + 1,
+                playerSelf,
+                playerOther
+              );
             }
 
             if (score < bestScore) {
@@ -199,13 +248,11 @@ export default class TicTacGame extends Game {
       }
       return bestScore;
     }
-
   };
 
   takeTurn = (player, [x, y]) => {
-
     if (this.status !== GameStatus.inGame) {
-      throw new Error("The game is not currently active")
+      throw new Error("The game is not currently active");
     }
 
     if (player.id !== this.currentPlayer.id) {
@@ -218,10 +265,13 @@ export default class TicTacGame extends Game {
 
     this.board[x][y] = player.id;
 
-    const [isGameWon, winningSquares] = this.checkForWinAtPoint(this.board, [x,y]);
+    const [isGameWon, winningSquares] = this.checkForWinAtPoint(this.board, [
+      x,
+      y
+    ]);
 
     if (isGameWon) {
-      player.score+=1;
+      player.score += 1;
 
       this.winner = player;
       this.status = GameStatus.won;
@@ -229,7 +279,10 @@ export default class TicTacGame extends Game {
 
       this.lastResults.push(this.winner);
       if (this.lastResults.length > this.lastResultsAmount) {
-        this.lastResults.splice(0, this.lastResults.length-this.lastResultsAmount);
+        this.lastResults.splice(
+          0,
+          this.lastResults.length - this.lastResultsAmount
+        );
       }
     }
 
@@ -238,9 +291,12 @@ export default class TicTacGame extends Game {
       this.ties += 1;
       this.status = GameStatus.draw;
 
-      this.lastResults.push('tie');
+      this.lastResults.push("tie");
       if (this.lastResults.length > this.lastResultsAmount) {
-        this.lastResults.splice(0, this.lastResults.length-this.lastResultsAmount);
+        this.lastResults.splice(
+          0,
+          this.lastResults.length - this.lastResultsAmount
+        );
       }
     }
 
@@ -249,12 +305,15 @@ export default class TicTacGame extends Game {
       return;
     }
 
-
     this.goToNextPlayer();
   };
 
   playAgain = () => {
-    this.winningSquares = [[null, null], [null, null], [null, null]];
+    this.winningSquares = [
+      [null, null],
+      [null, null],
+      [null, null]
+    ];
     this.winner = null;
     this.status = GameStatus.inGame;
     this.board = [
@@ -262,9 +321,8 @@ export default class TicTacGame extends Game {
       [null, null, null],
       [null, null, null]
     ];
-    const otherPlayer = this.players.find((p) => p.id !== this.currentPlayer.id);
+    const otherPlayer = this.players.find(p => p.id !== this.currentPlayer.id);
 
     this.setCurrentPlayer(otherPlayer);
   };
-
 }

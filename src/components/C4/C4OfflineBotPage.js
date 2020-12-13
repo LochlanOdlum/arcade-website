@@ -74,6 +74,7 @@ const C4OfflineBotPage = () => {
         onColumnClick={onColumnClick}
         myPlayer={game.currentPlayer}
       />
+      <div style={{backgroundColor: 'Red'}} onClick={() => console.log(game.bestMove(game.currentPlayer))}> Click me! </div>
     </>
   );
 };
