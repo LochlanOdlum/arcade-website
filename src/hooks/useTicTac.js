@@ -68,7 +68,8 @@ const useTicTac = () => {
     players: game?.players,
     winner: game?.winner,
     status: game?.status,
-    currentPlayer: game?.currentPlayer
+    currentPlayer: game?.currentPlayer,
+    startingPlayer: game?.startingPlayer
   };
 };
 

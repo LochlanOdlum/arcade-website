@@ -22,8 +22,8 @@ export default class TicTacGame extends Game {
 
     super(players);
 
-    const startingPlayer = this.players.find(p => p.value === "x");
-    this.setCurrentPlayer(startingPlayer);
+    this.startingPlayer = this.players.find(p => p.value === "x");
+    this.setCurrentPlayer(this.startingPlayer);
   }
 
   start = () => {
@@ -163,14 +163,24 @@ export default class TicTacGame extends Game {
         }
       }
     }
-    console.log(bestScore);
 
     return bestMove;
   };
 
   minimax = (board, isMaximising, depth, playerSelf, playerOther) => {
     if (depth > 2) {
-      return 0;
+      const randomInt = Math.random();
+      if (randomInt < 0.1) {
+        // console.log('returned 0');
+        return 0;
+      }
+    }
+
+    if (depth === 2) {
+      const randomInt = Math.random();
+      if (randomInt < 0.005) {
+        return 0;
+      }
     }
     //isMaximising means it's playerSelf's turn to move, trying to get largest value of game (as value = gain)
     if (isMaximising) {
@@ -309,8 +319,9 @@ export default class TicTacGame extends Game {
       [null, null, null],
       [null, null, null]
     ];
-    const otherPlayer = this.players.find(p => p.id !== this.currentPlayer.id);
+    const otherPlayer = this.players.find(p => p.id !== this.startingPlayer.id);
 
     this.setCurrentPlayer(otherPlayer);
+    this.startingPlayer = otherPlayer;
   };
 }
