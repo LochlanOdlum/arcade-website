@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SmallHeader from "../SmallHeader";
+import SmallHeader from "../General/SmallHeader";
 import TicTacSelectMode from "./TicTacSelectMode";
 import "../../styling/TTT/TicTacPage.css";
 import TicTacOfflineFriendPage from "./TicTacOfflineFriendPage";

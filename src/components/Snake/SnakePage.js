@@ -1,6 +1,6 @@
 import React from "react";
 import SnakeBoard from "./SnakeBoard";
-import SmallHeader from "../SmallHeader";
+import SmallHeader from "../General/SmallHeader";
 import '../../styling/Snake/SnakePage.css'
 
 

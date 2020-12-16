@@ -1,7 +1,7 @@
 import React from "react";
 import LoadingSpinner from "./LoadingSpinner";
 import GreyBackground from "./GreyBackground";
-import '../styling/LoadingOverlay.css'
+import '../../styling/General/LoadingOverlay.css'
 
 const LoadingOverlay = ({text}) => {
   return (

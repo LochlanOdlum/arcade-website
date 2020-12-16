@@ -18,7 +18,7 @@ const useSnake = (boardWidth, boardHeight, cooldown) => {
 
   //Function is called here instead of in shiftSnake so board will be updated after snake is shifted.
   const moveLoop = () => {
-    if (game.status !== SnakeGameStatus.inGame) {
+    if (game.status !== SnakeGameStatus.inGame || game.isPaused) {
       return;
     }
     game.shiftSnake();
@@ -29,6 +29,17 @@ const useSnake = (boardWidth, boardHeight, cooldown) => {
     }, game.moveCoolDown);
     forceUpdate();
   };
+
+  const togglePause = () => {
+    if (game.isPaused) {
+      game.isPaused = false;
+      moveLoop();
+      return;
+    }
+    game.isPaused = true;
+    forceUpdate();
+  };
+
 
   const start = (boardWidth, boardHeight, cooldown) => {
     game.start(boardWidth, boardHeight, cooldown);
@@ -41,15 +52,25 @@ const useSnake = (boardWidth, boardHeight, cooldown) => {
     forceUpdate();
   };
 
+  const playAgain = () => {
+    game.playAgain();
+    forceUpdate();
+  };
+
+
   return {
     start,
     turn,
+    playAgain,
+    togglePause,
 
     position: game.position,
     status: game.status,
     board: game.board,
     score: game.score,
-    food: game.food
+    highScore: game.highScore,
+    food: game.food,
+    isPaused: game.isPaused
   };
 };
 

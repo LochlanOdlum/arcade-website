@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import SmallHeader from "../SmallHeader";
+import SmallHeader from "../General/SmallHeader";
 import TicTacBoard from "./TicTacBoard";
 import useTicTac from "../../hooks/useTicTac";
 import { GameStatus } from "../../gameLogic/game";

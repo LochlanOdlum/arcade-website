@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../styling/TTT/TicTacSelectMode.css";
-import ErrorNotif from "../ErrorNotif";
+import ErrorNotif from "../General/ErrorNotif";
 
 
 const TicTacSelectMode = props => {

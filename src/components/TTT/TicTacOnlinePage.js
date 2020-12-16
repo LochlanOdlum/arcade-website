@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import SmallHeader from "../SmallHeader";
+import SmallHeader from "../General/SmallHeader";
 import TicTacBoard from "./TicTacBoard";
 import useTicTac, { displayGame } from "../../hooks/useTicTac";
 import io from "socket.io-client";
-import LoadingOverlay from "../LoadingOverlay";
+import LoadingOverlay from "../General/LoadingOverlay";
 import { GameStatus } from "../../gameLogic/game";
 
 const randomID = () => {

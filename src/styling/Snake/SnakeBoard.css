@@ -23,19 +23,24 @@
     display: block;
     width: 60vw;
     max-width: 900px;
-    padding-left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 23px;
     color: white;
 }
 
-.s-button-start {
+.s-right-score {
+    float: right;
+}
+
+.s-center-text {
+    text-align: center;
     margin-top: 20%;
     color: white;
     font-size: 100px;
     font-family: equilibrium;
     padding: 10px;
     border-radius: 10%;
-    background: rgb(158, 191, 62);
 }
 
 
@@ -57,6 +62,11 @@
 .s-cell.s-cell-snake {
     padding-top: 0;
 }
+
+.s-grey.s-cell-snake::before {
+    background: rgba(33, 38, 16, 0.75)
+}
+
 .s-cherry {
     width: 100%;
     background: rgb(158, 191, 62);
@@ -81,5 +91,6 @@
     }
     .s-score {
         padding-left: 0;
+        width: 88vw;
     }
 }

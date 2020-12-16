@@ -172,14 +172,14 @@ export default class TicTacGame extends Game {
       const randomInt = Math.random();
       if (randomInt < 0.1) {
         // console.log('returned 0');
-        return 0;
+        return randomInt -1;
       }
     }
 
     if (depth === 2) {
       const randomInt = Math.random();
-      if (randomInt < 0.005) {
-        return 0;
+      if (randomInt < 0.05) {
+        return randomInt -1;
       }
     }
     //isMaximising means it's playerSelf's turn to move, trying to get largest value of game (as value = gain)

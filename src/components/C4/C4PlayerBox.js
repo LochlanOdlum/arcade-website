@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styling/C4/C4PlayerBox.css";
-import "../../styling/PlayerBox.css";
+import "../../styling/General/PlayerBox.css";
 
 const TicTacPlayerBox = ({ side, name, game, id, value }) => {
   const borderClass = id === game.currentPlayer.id ? " player-box-border" : "";

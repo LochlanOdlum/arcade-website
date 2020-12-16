@@ -15,15 +15,18 @@ export const SnakeGameStatus = {
 };
 
 class SnakeGame {
-
   constructor(boardWidth, boardHeight, cooldown) {
-  //Position is stored as an array of (x,y) values for each part.
-  //Direction is x,y. Where (0,0) is top left. Default up.
+    this.newGameSetup(boardWidth, boardHeight, cooldown);
+    this.highScore = 0;
+  }
+
+  newGameSetup = (boardWidth, boardHeight, cooldown) => {
     this.direction = [0, -1];
     this.debouncedDirection = [0, -1];
     this.status = SnakeGameStatus.preGame;
     this.moveCoolDown = cooldown;
     this.score = 0;
+    this.isPaused= false;
     //Board width and height must be odd so snake can start in middle.
     this.boardWidth = boardWidth;
     this.boardHeight = boardHeight;
@@ -45,7 +48,7 @@ class SnakeGame {
     const startFood = this.newFoodPos();
     this.food[0] = startFood;
     this.board[startFood[0]][startFood[1]] = "food";
-  }
+  };
 
   generateID = () => {
     return Math.floor(Math.random() * 10 ** 10);
@@ -58,7 +61,7 @@ class SnakeGame {
       currentHead[1] + this.direction[1]
     ];
     const currentTail = this.position[0];
-    // const newTail = this.position[1];
+
     const foodX = this.food[0][0];
     const foodY = this.food[0][1];
 
@@ -79,6 +82,9 @@ class SnakeGame {
         !(newHead[0] === currentTail[0] && newHead[1] === currentTail[1]))
     ) {
       this.status = SnakeGameStatus.endedGame;
+      if (this.score > this.highScore) {
+        this.highScore = this.score;
+      }
       return;
     }
 
@@ -99,16 +105,6 @@ class SnakeGame {
     this.board[newHead[0]][[newHead[1]]] = "snake";
   };
 
-  moveLoop = () => {
-    if (this.status !== SnakeGameStatus.inGame) {
-      return;
-    }
-    this.shiftSnake();
-
-    setTimeout(() => {
-      this.moveLoop();
-    }, this.moveCoolDown);
-  };
 
   newFoodPos = () => {
     const foodX = Math.floor(Math.random() * this.boardWidth);
@@ -126,6 +122,10 @@ class SnakeGame {
 
   turn = (x, y) => {
     this.debouncedDirection = [x, y];
+  };
+
+  playAgain = () => {
+    this.newGameSetup(this.boardWidth, this.boardHeight, this.moveCoolDown);
   };
 }
 

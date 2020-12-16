@@ -3,9 +3,9 @@ import C4Board from "./C4Board";
 import io from 'socket.io-client';
 import {displayGame} from "../../hooks/useC4";
 import useC4 from "../../hooks/useC4";
-import LoadingOverlay from "../LoadingOverlay";
+import LoadingOverlay from "../General/LoadingOverlay";
 import {GameStatus} from "../../gameLogic/game";
-import SmallHeader from "../SmallHeader";
+import SmallHeader from "../General/SmallHeader";
 
 let socket = '';
 const randomID = () => {

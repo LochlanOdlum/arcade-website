@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+ import React, { useEffect, useState } from "react";
 import "../../styling/C4/C4Board.css";
 import C4PlayerBox from "./C4PlayerBox";
 import { GameStatus } from "../../gameLogic/game";

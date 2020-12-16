@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styling/C4/C4SelectMode.css";
-import SmallHeader from "../SmallHeader";
-import ErrorNotif from "../ErrorNotif";
+import SmallHeader from "../General/SmallHeader";
+import ErrorNotif from "../General/ErrorNotif";
 
 const C4SelectMode = ({ setGameType, setOnlineNick }) => {
   const [currentNick, setCurrentNick] = useState("");
@@ -67,7 +67,7 @@ const C4SelectMode = ({ setGameType, setOnlineNick }) => {
         <div className="C4-play C4-play-offline" onClick={onOfflineClick}>
           Offline vs Friend!
         </div>
-        <div className="C4-play C4-play-offline" onClick={onOfflineBotClick}>
+        <div className="C4-play C4-play-offlineBot" onClick={onOfflineBotClick}>
           Offline vs Bot!
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styling/TTT/TicTacHeader.css';
+import '../../styling/TTT/TicTacHeader.css';
 
 const SmallHeader = () => {
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styling/TTT/TicTacPlayerBox.css";
-import "../../styling/PlayerBox.css";
+import "../../styling/General/PlayerBox.css";
 
 const TicTacPlayerBox = ({ side, name, game, id, value, playerType }) => {
   const iconName = playerType === 'user' ? '/images/user-icon.svg' : '/images/bot-icon.svg';

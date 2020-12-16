@@ -1,5 +1,5 @@
 import React from "react";
-import "../styling/ErrorNotif.css";
+import "../../styling/General/ErrorNotif.css";
 
 const ErrorNotif = ({ text }) => {
   return (

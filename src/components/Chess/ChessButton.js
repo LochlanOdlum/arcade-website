@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import ErrorNotif from "../ErrorNotif";
+import ErrorNotif from "../General/ErrorNotif";
 
 const ChessButton = () => {
   const [displayError, setDisplayError] = useState(false);

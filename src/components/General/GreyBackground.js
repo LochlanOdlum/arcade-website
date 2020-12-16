@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styling/GreyBackground.css'
+import '../../styling/General/GreyBackground.css'
 
 const GreyBackground = (props) => {
   return (

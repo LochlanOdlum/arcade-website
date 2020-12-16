@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import C4Board from "./C4Board";
 import useC4, { displayGame } from "../../hooks/useC4";
-import SmallHeader from "../SmallHeader";
+import SmallHeader from "../General/SmallHeader";
 import { GameStatus } from "../../gameLogic/game";
 
 const botGameConfig = {
@@ -74,7 +74,7 @@ const C4OfflineBotPage = () => {
         onColumnClick={onColumnClick}
         myPlayer={game.currentPlayer}
       />
-      <div style={{backgroundColor: 'Red'}} onClick={() => console.log(game.bestMove(game.currentPlayer))}> Click me! </div>
+      {/*<div style={{backgroundColor: 'Red'}} onClick={() => console.log(game.bestMove(game.currentPlayer))}> Click me! </div>*/}
     </>
   );
 };

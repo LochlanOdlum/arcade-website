@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styling/GameButton.css";
+import "../../styling/General/GameButton.css";
 import {Link} from 'react-router-dom';
 
 const TicTacButton = () => {

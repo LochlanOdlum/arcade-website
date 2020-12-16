@@ -53,8 +53,18 @@
 .C4-play-offline {
     background: rgb(215, 57, 172);
 }
+
 .C4-play-offline:hover {
     background: rgb(176, 47, 141);
+}
+
+.C4-play-offlineBot {
+    margin-top: 10px;
+    background: rgb(155, 11, 115);
+}
+
+.C4-play-offlineBot:hover {
+    background: rgb(108, 7, 80);
 }
 
 .C4-or-text {

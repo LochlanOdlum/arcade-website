@@ -119,9 +119,8 @@ export default class C4Game extends Game {
     alpha,
     beta
   ) => {
-    console.log("p");
-    if (depth > 10) {
-      return 0;
+    if (depth > 7) {
+      return (Math.random() - 1);
     }
     //isMaximising means it's playerSelf's turn to move, trying to get largest value of game (as value = gain)
     if (isMaximising) {
