@@ -93,4 +93,8 @@
         padding-left: 0;
         width: 88vw;
     }
+    .s-center-text {
+        margin-top: 10%;
+        font-size: 80px;
+    }
 }
