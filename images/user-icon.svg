@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="method-draw-image.svg"
+   id="svg26"
+   version="1.1"
+   height="82"
+   width="80">
+  <metadata
+     id="metadata32">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs30" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg26"
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:cy="36.681043"
+     inkscape:cx="25.782592"
+     inkscape:zoom="7.919596"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showgrid="false"
+     id="namedview28"
+     inkscape:window-height="1350"
+     inkscape:window-width="2131"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <g
+     transform="translate(-8.14925,-5.80597)"
+     id="g24">
+    <path
+       d="m 70.14925,27.80597 c 0,-12.1 -9.9,-22 -22,-22 -12.1,0 -22,9.9 -22,22 0,12.1 9.9,22 22,22 12.1,0 22,-9.9 22,-22 z"
+       id="svg_3"
+       fill="#6a48b0" />
+    <path
+       d="m 56.84925,54.40597 c -2.8,0.9 -5.7,1.4 -8.7,1.4 -3,0 -5.9,-0.5 -8.7,-1.4 -8.8,-2.9 -18.6,-0.5 -24.4,6.6 -4.3,5.3 -6.9,12.1 -6.9,19.4 0,4.1 3.3,7.4 7.4,7.4 h 65.2 c 4.1,0 7.4,-3.3 7.4,-7.4 0,-7.3 -2.6,-14.1 -6.9,-19.4 -5.9,-7.1 -15.6,-9.5 -24.4,-6.6 z"
+       id="svg_4"
+       fill="#6a48b0" />
+  </g>
+</svg>
