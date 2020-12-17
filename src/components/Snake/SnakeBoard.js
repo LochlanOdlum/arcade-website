@@ -63,6 +63,7 @@ const SnakeBoard = () => {
     }
   };
 
+
   const renderBoard = () => {
     return game.board.map((columnx, indexX) => (
       <div key={`${indexX}`} className="s-column">

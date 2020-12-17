@@ -20,6 +20,10 @@ const useSnakeSwipeArrowTurn = (game) => {
     //This last event listener prevents scrolling
     document.body.addEventListener('touchmove', (e) => { e.preventDefault()}, { passive: false });
 
+    document.body.onkeydown = function(e) {
+      e.preventDefault();
+    };
+
     let xDown = null;
     let yDown = null;
 
